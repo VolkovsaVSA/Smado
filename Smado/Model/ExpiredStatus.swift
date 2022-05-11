@@ -16,8 +16,6 @@ enum ExpiredStatus: String, CaseIterable {
             case .today: return NSLocalizedString("Today", comment: " ")
             case .thisWeek: return NSLocalizedString("less 7 days", comment: " ")
             case .thisMonth: return NSLocalizedString("less 30 days", comment: " ")
-//            case .notExpiries:
-//                return ""
         }
     }
 }

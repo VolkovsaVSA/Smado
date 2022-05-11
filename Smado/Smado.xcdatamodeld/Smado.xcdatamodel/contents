@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E258" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
-    <entity name="CategoryCD" representedClassName="CategoryCD" syncable="YES" codeGenerationType="class">
+    <entity name="CategoryCD" representedClassName="CategoryCD" syncable="YES">
         <attribute name="craetedDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="image" attributeType="String" defaultValueString="list.bullet"/>
@@ -8,7 +8,7 @@
         <relationship name="documents" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="DocumentCD" inverseName="parentCategory" inverseEntity="DocumentCD"/>
         <relationship name="folders" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FolderCD" inverseName="parentCategory" inverseEntity="FolderCD"/>
     </entity>
-    <entity name="DocumentCD" representedClassName="DocumentCD" syncable="YES" codeGenerationType="class">
+    <entity name="DocumentCD" representedClassName="DocumentCD" syncable="YES">
         <attribute name="comment" optional="YES" attributeType="String"/>
         <attribute name="dateAdded" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="dateEnd" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
@@ -21,7 +21,7 @@
         <relationship name="parentCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CategoryCD" inverseName="documents" inverseEntity="CategoryCD"/>
         <relationship name="parentFolder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FolderCD" inverseName="documents" inverseEntity="FolderCD"/>
     </entity>
-    <entity name="FolderCD" representedClassName="FolderCD" syncable="YES" codeGenerationType="class">
+    <entity name="FolderCD" representedClassName="FolderCD" syncable="YES">
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="title" attributeType="String" defaultValueString=""/>
         <relationship name="childrenFolders" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="FolderCD" inverseName="parentFolder" inverseEntity="FolderCD"/>
@@ -29,7 +29,7 @@
         <relationship name="parentCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CategoryCD" inverseName="folders" inverseEntity="CategoryCD"/>
         <relationship name="parentFolder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FolderCD" inverseName="childrenFolders" inverseEntity="FolderCD"/>
     </entity>
-    <entity name="ImageCD" representedClassName="ImageCD" syncable="YES" codeGenerationType="class">
+    <entity name="ImageCD" representedClassName="ImageCD" syncable="YES">
         <attribute name="data" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
         <attribute name="fileExtention" optional="YES" attributeType="String"/>
         <attribute name="fileName" attributeType="String" defaultValueString=""/>

@@ -11,6 +11,5 @@ import UIKit
 struct FileModel: Identifiable, Equatable, Hashable {
     var id = UUID()
     var data: Data
-//    var url: URL
     var fileName: String
 }

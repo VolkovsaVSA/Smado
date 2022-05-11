@@ -11,17 +11,12 @@ import SwiftUI
 struct SmadoApp: App {
     private let cd = CDStack.shared
     private let storeManager = StoreManager.shared
-    private let categoryVM = CategoryViewModel.shared
 
     var body: some Scene {
         WindowGroup {
             HomeView()
                 .environment(\.managedObjectContext, cd.container.viewContext)
-                .environmentObject(categoryVM)
                 .environmentObject(storeManager)
-                .onAppear {
-                    
-                }
                 .onReceive(NotificationCenter.default.publisher(for: .NSPersistentStoreRemoteChange), perform: { _ in
                     print("cloudkit udated")
                 })
