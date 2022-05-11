@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E258" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="CategoryCD" representedClassName="CategoryCD" syncable="YES" codeGenerationType="class">
+        <attribute name="craetedDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="image" attributeType="String" defaultValueString="list.bullet"/>
+        <attribute name="title" attributeType="String" defaultValueString="Title"/>
+        <relationship name="documents" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="DocumentCD" inverseName="parentCategory" inverseEntity="DocumentCD"/>
+        <relationship name="folders" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FolderCD" inverseName="parentCategory" inverseEntity="FolderCD"/>
+    </entity>
+    <entity name="DocumentCD" representedClassName="DocumentCD" syncable="YES" codeGenerationType="class">
+        <attribute name="comment" optional="YES" attributeType="String"/>
+        <attribute name="dateAdded" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="dateEnd" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="notifMonth" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="notifToday" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
+        <attribute name="notifWeek" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="title" attributeType="String" defaultValueString="Title"/>
+        <relationship name="images" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ImageCD" inverseName="parentDocument" inverseEntity="ImageCD"/>
+        <relationship name="parentCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CategoryCD" inverseName="documents" inverseEntity="CategoryCD"/>
+        <relationship name="parentFolder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FolderCD" inverseName="documents" inverseEntity="FolderCD"/>
+    </entity>
+    <entity name="FolderCD" representedClassName="FolderCD" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="title" attributeType="String" defaultValueString=""/>
+        <relationship name="childrenFolders" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="FolderCD" inverseName="parentFolder" inverseEntity="FolderCD"/>
+        <relationship name="documents" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="DocumentCD" inverseName="parentFolder" inverseEntity="DocumentCD"/>
+        <relationship name="parentCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CategoryCD" inverseName="folders" inverseEntity="CategoryCD"/>
+        <relationship name="parentFolder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FolderCD" inverseName="childrenFolders" inverseEntity="FolderCD"/>
+    </entity>
+    <entity name="ImageCD" representedClassName="ImageCD" syncable="YES" codeGenerationType="class">
+        <attribute name="data" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="fileExtention" optional="YES" attributeType="String"/>
+        <attribute name="fileName" attributeType="String" defaultValueString=""/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <relationship name="parentDocument" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DocumentCD" inverseName="images" inverseEntity="DocumentCD"/>
+    </entity>
+    <elements>
+        <element name="CategoryCD" positionX="-63" positionY="-18" width="128" height="119"/>
+        <element name="DocumentCD" positionX="-63" positionY="9" width="128" height="194"/>
+        <element name="FolderCD" positionX="-45" positionY="54" width="128" height="119"/>
+        <element name="ImageCD" positionX="-54" positionY="45" width="128" height="104"/>
+    </elements>
+</model>

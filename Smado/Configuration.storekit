@@ -1,0 +1,102 @@
+{
+  "identifier" : "4D9A60C8",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+
+  ],
+  "settings" : {
+
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "16DFC91D",
+      "localizations" : [
+
+      ],
+      "name" : "Backup",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "1.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "486CD9D2",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "",
+              "displayName" : "Backup for 1 month",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "SmadoBackup1Month",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Backup for 1 month",
+          "subscriptionGroupID" : "16DFC91D",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "9.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "B884BA87",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "",
+              "displayName" : "Backup for 12 months",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "SmadoBackup12Month",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "Backup for 12 months",
+          "subscriptionGroupID" : "16DFC91D",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "7.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "7D093ACC",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "",
+              "displayName" : "Backup for 6 months",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "SmadoBackup6Month",
+          "recurringSubscriptionPeriod" : "P6M",
+          "referenceName" : "Backup for 6 months",
+          "subscriptionGroupID" : "16DFC91D",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 1,
+    "minor" : 2
+  }
+}
