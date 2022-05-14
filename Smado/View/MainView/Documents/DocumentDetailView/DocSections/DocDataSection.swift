@@ -38,10 +38,9 @@ struct DocDataSection: View {
                         }
                     }
                     .pickerStyle(.menu)
-                    .ignoresSafeArea()
                 }
             }
-            .newDocSectionStyle()
+//            .newDocSectionStyle()
 
         }
         .ignoresSafeArea()

@@ -9,19 +9,28 @@ import SwiftUI
 
 extension View {
     
-    func documentPicker(isPresented: Binding<Bool>, files: Binding<[FileModel]>) -> some View {
+    func documentPicker(isPresented: Binding<Bool>, files: Binding<[FileModel]>, callBack: @escaping ([String])->Void) -> some View {
         self
         .fileImporter(isPresented: isPresented,
-                      allowedContentTypes: [.image/*, .pdf*/],
+                      allowedContentTypes: [.image, .pdf],
                       allowsMultipleSelection: true)
         { result in
+            
+            var bigFiles = [String]()
 
             switch result {
                 case .success(let urls):
+                    
                     urls.forEach { url in
                         if url.pathExtension.lowercased() == "pdf" {
                             guard let data = FileManager.default.contents(atPath: url.path) else { return }
-                            files.wrappedValue.append(FileModel(data: data, fileName: url.lastPathComponent))
+                            
+                            if data.count > 4_000_000 {
+                                print("\(url.lastPathComponent): \(data.count)")
+                                bigFiles.append(url.lastPathComponent)
+                            } else {
+                                files.wrappedValue.append(FileModel(data: data, fileName: url.lastPathComponent))
+                            }
                         } else {
                             guard let data = ImageHelper.compressImageWithURL(url: url) else {return}
                             files.wrappedValue.append(FileModel(data: data, fileName: url.lastPathComponent))
@@ -30,6 +39,8 @@ extension View {
                 case .failure(let error):
                     print(error)
             }
+            
+            callBack(bigFiles)
             
         }
         .onDisappear() {

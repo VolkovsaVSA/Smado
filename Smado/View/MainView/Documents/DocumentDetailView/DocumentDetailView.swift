@@ -22,8 +22,10 @@ struct DocumentDetailView: View {
     @State private var showDocumentPicker = false
     @State private var cameraSelectedFile: FileModel?
     @State private var files: [FileModel] = []
-    @State private var refreshfilesID = UUID()
+//    @State private var refreshfilesID = UUID()
     @State private var showDeleteAlert = false
+    @State private var showBigFilesAlert = false
+    @State private var bigFiles = ""
 
     @State private var category: CategoryCD? = nil
     @State private var document: DocumentCD? = nil
@@ -65,20 +67,39 @@ struct DocumentDetailView: View {
                 
                 DocSaveButton(title: $title, isNewDocument: isNewDocument) { docSaveAction() }
             }
-            .toolbar { toolbarButton() }
+            .toolbar {
+                toolbarButton()
+            }
             .navigationBarTitleDisplayMode(.inline)
         }
         .interactiveDismissDisabled(true)
         
-        .sheet(isPresented: $showCameraPicker) { CameraPicker(selectedFile: $cameraSelectedFile) }
-        .sheet(isPresented: $showImagePicker) { ImagePicker(files: $files) }
-        .documentPicker(isPresented: $showDocumentPicker, files: $files)
+        .sheet(isPresented: $showCameraPicker) {
+            CameraPicker(selectedFile: $cameraSelectedFile)
+        }
+        .sheet(isPresented: $showImagePicker) {
+            ImagePicker(files: $files)
+        }
+        .documentPicker(isPresented: $showDocumentPicker, files: $files) { tempBigFiles in
+            bigfilesProcessing(tempBigFiles)
+        }
+        
+        .onChange(of: cameraSelectedFile) {
+            onChangeCameraFile($0)
+        }
+        .onChange(of: files) {
+            onChangeFile($0)
+        }
 
-        .onChange(of: cameraSelectedFile) { onChangeCameraFile($0) }
-        .onChange(of: files) { onChangeFile($0) }
- 
         .alert("Delete this document?", isPresented: $showDeleteAlert) {
-            Button("Delete", role: .destructive) { deleteAlertAction() }
+            Button("Delete", role: .destructive) {
+                deleteAlertAction()
+            }
+        }
+        .alert("Warning!", isPresented: $showBigFilesAlert) {
+            
+        } message: {
+            Text("These files are too big (over 2 MB): \n\n\(bigFiles)\nPlease reduce the file size, convert to image format, or choose other files.")
         }
         
     }
@@ -117,11 +138,21 @@ extension DocumentDetailView {
             }
         }
         files = []
-        refreshfilesID = UUID()
+//        refreshfilesID = UUID()
     }
     
     fileprivate func onChangeCameraFile(_ newValue: FileModel?) {
         if let newfile = newValue { files.append(newfile) }
+    }
+    
+    fileprivate func bigfilesProcessing(_ tempBigFiles: [String]) {
+        if !tempBigFiles.isEmpty {
+            bigFiles = ""
+            tempBigFiles.forEach { file in
+                bigFiles += file + "\n"
+            }
+            showBigFilesAlert.toggle()
+        }
     }
     
     @ToolbarContentBuilder
@@ -148,7 +179,6 @@ extension DocumentDetailView {
                         .padding(6)
                         .background(.quaternary)
                         .cornerRadius(8)
-
                 }
                 .buttonStyle(.bordered)
             }

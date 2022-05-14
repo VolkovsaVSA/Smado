@@ -25,7 +25,7 @@ struct DocNotifSection: View {
                 Toggle("30", isOn: $notifMonth)
             }
             .toggleStyle(.button)
-            .newDocSectionStyle()
+//            .newDocSectionStyle()
             
         }
         .ignoresSafeArea()

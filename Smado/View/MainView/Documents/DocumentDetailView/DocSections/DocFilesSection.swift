@@ -17,13 +17,6 @@ struct DocFilesSection: View {
     @Binding var document: DocumentCD?
     
     
-    fileprivate func tapToFile(image: ImageCD) {
-        if let data = image.data,
-           let fileName = image.fileName
-        {
-            tempUrl = LocalFilesHelper.writeTempFile(data: data, fileName: fileName)
-        }
-    }
     
     var body: some View {
         
@@ -36,27 +29,23 @@ struct DocFilesSection: View {
                         Text(image.fileName ?? "no file name")
                             .font(.system(size: 12, weight: .thin, design: .default))
                         
-                        Group {
-                            if image.fileExtention?.lowercased() == "pdf" {
-                                if let data = image.data {
-                                    PDFKitView(data: data, singlePage: false)
-                                        .frame(height: height)
-                                } else {
-                                    Image(systemName: "eye.slash")
-                                        .resizable()
-                                        .scaledToFit()
-                                        .foregroundColor(Color("imageFrameColor"))
-                                }
+                        if image.fileExtention?.lowercased() == "pdf" {
+                            if let data = image.data {
+                                PDFKitView(data: data, singlePage: false)
+                                    .frame(height: height)
                             } else {
-                                DocumentImage(image: image)
+                                Image(systemName: "eye.slash")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .foregroundColor(Color("imageFrameColor"))
                             }
+                        } else {
+                            DocumentImage(image: image)
                         }
-                        .categoriesCellStyle(padding: 0)
-                        
                         
 
                     }
-                    .id(refreshfilesID)
+                    
                     .onTapGesture { tapToFile(image: image) }
                     
                     .swipeActions(edge: .trailing, allowsFullSwipe: true) {
@@ -71,10 +60,10 @@ struct DocFilesSection: View {
                     }
                 }//ForEach
 //                .onMove(perform: onMove)
-                
+                .id(refreshfilesID)
+//
                 MockSpaceInList(height: 50)
                 
-                    
             }//if let images = document?.images?.allObjects
             
         }//section
@@ -82,4 +71,17 @@ struct DocFilesSection: View {
         .quickLookPreview($tempUrl)
         
     }
+}
+
+
+extension DocFilesSection {
+    
+    fileprivate func tapToFile(image: ImageCD) {
+        if let data = image.data,
+           let fileName = image.fileName
+        {
+            tempUrl = LocalFilesHelper.writeTempFile(data: data, fileName: fileName)
+        }
+    }
+    
 }

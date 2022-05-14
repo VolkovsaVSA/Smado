@@ -29,7 +29,7 @@ class ImageHelper {
         }()
 
         let destinationProperties = [
-            kCGImageDestinationLossyCompressionQuality: isPNG ? 1.0 : 0.75
+            kCGImageDestinationLossyCompressionQuality: isPNG ? 1.0 : 0.7
         ] as CFDictionary
 
         CGImageDestinationAddImage(imageDestination, cgImage, destinationProperties)
