@@ -1,0 +1,3 @@
+/* Privacy - Camera Usage Description */
+"NSCameraUsageDescription" = "Za dodavanje fotografija dokumentima u aplikaciji potreban je pristup kameri.";
+

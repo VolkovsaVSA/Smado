@@ -50,7 +50,7 @@ struct PurchaseView: View {
                     .fixedSize(horizontal: false, vertical: true)
                     .font(.system(size: 12))
                     .padding()
-                    .lineLimit(2)
+                    .lineLimit(nil)
                     .multilineTextAlignment(.center)
                 
             }//Vstack

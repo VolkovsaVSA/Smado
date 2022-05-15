@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct TermsConditions: View {
+    @Environment(\.dismiss) private var dismiss
+    
+    
     var body: some View {
+        
         ScrollView {
             Text("Terms & Conditions")
                 .font(.title3)
@@ -94,6 +98,23 @@ struct TermsConditions: View {
                 """)
                 .font(.system(size: 14, weight: .thin, design: .default))
         }
+        .overlay(
+            VStack {
+                HStack {
+                    Button {
+                        dismiss()
+                    } label: {
+                        Image(systemName: "plus.circle.fill")
+                            .rotationEffect(.degrees(45))
+                            .background(Color.primary.colorInvert().clipShape(Circle()))
+                    }
+                    .buttonStyle(.plain)
+                    
+                    Spacer()
+                }
+                Spacer()
+            }
+        )
         .padding()
         .ignoresSafeArea()
         
