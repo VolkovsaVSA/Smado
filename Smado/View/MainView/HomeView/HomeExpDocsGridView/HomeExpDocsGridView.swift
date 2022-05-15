@@ -20,7 +20,7 @@ struct HomeExpDocsGridView: View {
         VStack {
             LazyVGrid(columns: columns, alignment: .center, spacing: 10) {
                 Section(header:
-                            Text("Documents expires:").font(.system(size: 16, weight: .semibold, design: .monospaced))
+                            Text("Expires:").font(.system(size: 16, weight: .semibold, design: .default))
                 ) {
                     ForEach(expiresData, id: \.self) { item in
 

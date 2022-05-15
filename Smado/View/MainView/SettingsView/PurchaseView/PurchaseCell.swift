@@ -24,6 +24,7 @@ struct PurchaseCell: View {
                 {
                     Text("\(period.localizedPeriod()) at \(storeManager.calcPriceToMonth(product: product))/month. Save \(storeManager.calcSave(product: product))")
                         .font(.system(size: 14, weight: .light, design: .default))
+                        .multilineTextAlignment(.center)
                 } else {
                     Text(" ")
                         .font(.system(size: 1, weight: .light, design: .default))

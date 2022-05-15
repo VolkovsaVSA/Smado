@@ -35,7 +35,7 @@ struct TermsConditions: View {
                 Changes to This Terms and Conditions
                 I may update our Terms and Conditions from time to time. Thus, you are advised to review this page periodically for any changes. I will notify you of any changes by posting the new Terms and Conditions on this page.
                 
-                These terms and conditions are effective as of 2021-05-20
+                These terms and conditions are effective as of 2022-05-16
 
                 Contact Us
                 If you have any questions or suggestions about my Terms and Conditions, do not hesitate to contact me at smado@vsa.su.
@@ -87,7 +87,7 @@ struct TermsConditions: View {
                 Changes to This Privacy Policy
                 I may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. I will notify you of any changes by posting the new Privacy Policy on this page.
 
-                This policy is effective as of 2022-05-20
+                This policy is effective as of 2022-05-16
 
                 Contact Us
                 If you have any questions or suggestions about my Privacy Policy, do not hesitate to contact me at smado@vsa.su.

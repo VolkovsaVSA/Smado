@@ -42,7 +42,7 @@ struct DocumentPicker: UIViewControllerRepresentable {
                     guard let data = FileManager.default.contents(atPath: url.path) else { return }
                     if data.count > 4_000_000 {
                         print("\(url.lastPathComponent): \(data.count)")
-                        tempBigFiles.append((url.lastPathComponent,data.count))
+                        tempBigFiles.append((url.lastPathComponent, data.count/1_000_000))
                     } else {
                         parent.$files.wrappedValue.append(FileModel(data: data, fileName: url.lastPathComponent))
                     }
@@ -55,7 +55,7 @@ struct DocumentPicker: UIViewControllerRepresentable {
             if !tempBigFiles.isEmpty {
                 parent.bigFiles = ""
                 tempBigFiles.forEach { file in
-                    parent.bigFiles += file.0 + " (\(file.1/1_000_000) MB)" + "\n"
+                    parent.bigFiles += file.0 + " (" + file.1.description + NSLocalizedString(" MB)\n", comment: "bigfiles")
                 }
             }
             

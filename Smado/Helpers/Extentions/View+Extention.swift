@@ -29,7 +29,7 @@ extension View {
                             guard let data = FileManager.default.contents(atPath: url.path) else { return }
                             if data.count > 4_000_000 {
                                 print("\(url.lastPathComponent): \(data.count)")
-                                bigFiles.append((url.lastPathComponent, data.count))
+                                bigFiles.append((url.lastPathComponent, data.count/1_000_000))
                             } else {
                                 files.wrappedValue.append(FileModel(data: data, fileName: url.lastPathComponent))
                             }

@@ -159,7 +159,7 @@ extension DocumentDetailView {
         if !tempBigFiles.isEmpty {
             bigFiles = ""
             tempBigFiles.forEach { file in
-                bigFiles += file.0 + NSLocalizedString(" (\(file.1/1_000_000) MB)" + "\n", comment: "bigFiles")
+                bigFiles += file.0 + " (" + file.1.description + NSLocalizedString(" MB)\n", comment: "bigfiles")
             }
             showBigFilesAlert.toggle()
         }
