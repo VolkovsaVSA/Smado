@@ -15,16 +15,16 @@ struct DocFilesSection: View {
     private var height: CGFloat { UIScreen.main.bounds.width / 0.75 }
     
     @Binding var document: DocumentCD?
-    
+//    @Binding var refreshfilesID: UUID
     
     
     var body: some View {
         
         Section(header: Text("Files")) {
             
-            if let images = document?.images?.allObjects as? [ImageCD] {
+            if let document = document {
                 
-                ForEach(images) { image in
+                ForEach(document.unwrapImages) { image in
                     VStack {
                         Text(image.fileName ?? "no file name")
                             .font(.system(size: 12, weight: .thin, design: .default))
@@ -43,7 +43,6 @@ struct DocFilesSection: View {
                             DocumentImage(image: image)
                         }
                         
-
                     }
                     
                     .onTapGesture { tapToFile(image: image) }

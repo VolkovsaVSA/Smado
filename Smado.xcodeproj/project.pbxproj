@@ -16,6 +16,7 @@
 		C8236E362805592000C7D4FD /* DocThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8236E352805592000C7D4FD /* DocThumbnail.swift */; };
 		C8236E392805603300C7D4FD /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8236E382805603300C7D4FD /* NotificationManager.swift */; };
 		C8236E3D280685B100C7D4FD /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8236E3C280685B100C7D4FD /* CloudKit.framework */; };
+		C82E0D5A2830C062007531E1 /* Bundle+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82E0D592830C062007531E1 /* Bundle+Extention.swift */; };
 		C832DEAD280CAB6300B895DD /* UDKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = C832DEAC280CAB6300B895DD /* UDKeys.swift */; };
 		C832DEAF280CAB9700B895DD /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C832DEAE280CAB9600B895DD /* SettingsView.swift */; };
 		C8399C2D27F59D8C0024A9FF /* PDFViewForImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8399C2C27F59D8C0024A9FF /* PDFViewForImage.swift */; };
@@ -52,6 +53,7 @@
 		C8AD61D627AD6FFA002DA72D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8AD61D527AD6FFA002DA72D /* Preview Assets.xcassets */; };
 		C8AD61D827AD6FFA002DA72D /* CDStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AD61D727AD6FFA002DA72D /* CDStack.swift */; };
 		C8AD61DB27AD6FFA002DA72D /* Smado.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C8AD61D927AD6FFA002DA72D /* Smado.xcdatamodeld */; };
+		C8B99D3F282F9ED500C7999E /* DocumentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B99D3E282F9ED500C7999E /* DocumentPicker.swift */; };
 		C8BF8775282ACA420074E736 /* MockSpaceInList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BF8774282ACA420074E736 /* MockSpaceInList.swift */; };
 		C8BF8777282AFDA00074E736 /* TermsConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BF8776282AFDA00074E736 /* TermsConditions.swift */; };
 		C8CF90D6280FE53C0028372A /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CF90D5280FE53C0028372A /* StoreManager.swift */; };
@@ -98,6 +100,7 @@
 		C8236E3A280685AE00C7D4FD /* Smado.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Smado.entitlements; sourceTree = "<group>"; };
 		C8236E3C280685B100C7D4FD /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		C8236E3E2806867000C7D4FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C82E0D592830C062007531E1 /* Bundle+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extention.swift"; sourceTree = "<group>"; };
 		C832DEAC280CAB6300B895DD /* UDKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UDKeys.swift; sourceTree = "<group>"; };
 		C832DEAE280CAB9600B895DD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		C8399C2C27F59D8C0024A9FF /* PDFViewForImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFViewForImage.swift; sourceTree = "<group>"; };
@@ -135,6 +138,7 @@
 		C8AD61D527AD6FFA002DA72D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C8AD61D727AD6FFA002DA72D /* CDStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDStack.swift; sourceTree = "<group>"; };
 		C8AD61DA27AD6FFA002DA72D /* Smado.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Smado.xcdatamodel; sourceTree = "<group>"; };
+		C8B99D3E282F9ED500C7999E /* DocumentPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPicker.swift; sourceTree = "<group>"; };
 		C8BF8774282ACA420074E736 /* MockSpaceInList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSpaceInList.swift; sourceTree = "<group>"; };
 		C8BF8776282AFDA00074E736 /* TermsConditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsConditions.swift; sourceTree = "<group>"; };
 		C8CF90D5280FE53C0028372A /* StoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
@@ -228,6 +232,7 @@
 				C8FFE99227BCD0CE0008F571 /* View+Extention.swift */,
 				C8D0552627DF503B004CCE0F /* String+Extention.swift */,
 				C875FE0228264E6E003F7E92 /* Date+Extention.swift */,
+				C82E0D592830C062007531E1 /* Bundle+Extention.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -387,6 +392,7 @@
 				C896E4E428174A2700E75E8D /* MailView.swift */,
 				C8D0552827E5A7AA004CCE0F /* ImagePicker.swift */,
 				C8EFEE2B27E6E7E6007885CA /* CameraPicker.swift */,
+				C8B99D3E282F9ED500C7999E /* DocumentPicker.swift */,
 			);
 			path = Pickers;
 			sourceTree = "<group>";
@@ -559,6 +565,7 @@
 				C8EFEE2C27E6E7E6007885CA /* CameraPicker.swift in Sources */,
 				C8CF90E7281183F10028372A /* PurchaseSection.swift in Sources */,
 				C896E4E528174A2700E75E8D /* MailView.swift in Sources */,
+				C8B99D3F282F9ED500C7999E /* DocumentPicker.swift in Sources */,
 				C832DEAF280CAB9700B895DD /* SettingsView.swift in Sources */,
 				C8FFE98C27B859550008F571 /* ColorView.swift in Sources */,
 				C8FFE99127B89F030008F571 /* DocumentsGridView.swift in Sources */,
@@ -574,6 +581,7 @@
 				C8236E392805603300C7D4FD /* NotificationManager.swift in Sources */,
 				C8CF90D6280FE53C0028372A /* StoreManager.swift in Sources */,
 				C8EFEE3627EF79FF007885CA /* DocumentDetailView.swift in Sources */,
+				C82E0D5A2830C062007531E1 /* Bundle+Extention.swift in Sources */,
 				C8236E362805592000C7D4FD /* DocThumbnail.swift in Sources */,
 				C8399C2D27F59D8C0024A9FF /* PDFViewForImage.swift in Sources */,
 				C832DEAD280CAB6300B895DD /* UDKeys.swift in Sources */,
@@ -734,12 +742,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Smado/Smado.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Smado/Preview Content\"";
 				DEVELOPMENT_TEAM = 7C46924T49;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Smado/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Smado;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Access to the camera is required to add photos to documents in the application";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -768,12 +777,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Smado/Smado.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Smado/Preview Content\"";
 				DEVELOPMENT_TEAM = 7C46924T49;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Smado/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Smado;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Access to the camera is required to add photos to documents in the application";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

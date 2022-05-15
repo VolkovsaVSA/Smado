@@ -14,7 +14,7 @@ struct HomeCatHeader: View {
     
     var body: some View {
         HStack {
-            Text("Categories" + " " + "(" + categories.count.description + ")")
+            Text("Categories (\(categories.count.description))")
             Spacer()
             Button { action() } label: { Image(systemName: "plus") }
             .buttonStyle(.bordered)

@@ -14,7 +14,16 @@ struct FeedbackSection: View {
     
     var body: some View {
         
-        Section(header: Text("Feedback").fontWeight(.semibold).foregroundColor(.primary)) {
+        Section(header: Text("Feedback").fontWeight(.semibold).foregroundColor(.primary),
+                footer:
+                    HStack {
+            Spacer()
+            Text("\(Bundle.main.displayName) \(Bundle.main.appVersionShort) (\(Bundle.main.appBuild))")
+                .font(.system(size: 12, weight: .thin, design: .default))
+            Spacer()
+        }
+                    
+        ) {
             
             VStack {
                 FeedbackButton(buttonText: NSLocalizedString("Send email to the developer", comment: " "),

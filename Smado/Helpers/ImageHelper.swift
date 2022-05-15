@@ -39,8 +39,10 @@ class ImageHelper {
     }
     
     static func compressImageWithURL(url: URL) -> Data? {
-        let sourceOptions = [kCGImageSourceShouldCache: false] as CFDictionary
-        guard let source = CGImageSourceCreateWithURL(url as CFURL, sourceOptions) else {return nil}
+        let sourceOptions = [kCGImageSourceShouldCache: true] as CFDictionary
+        guard let source = CGImageSourceCreateWithURL(url as CFURL, sourceOptions) else {
+            return nil
+        }
         
         return compressImage(source: source)
     }

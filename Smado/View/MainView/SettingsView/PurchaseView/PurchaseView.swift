@@ -22,6 +22,7 @@ struct PurchaseView: View {
                 
                 Text("Purchasing subscription you get backuping your data.")
                     .fontWeight(.thin)
+                    .multilineTextAlignment(.center)
                 
                 if let products = storeManager.products {
                     if products.isEmpty {
@@ -36,6 +37,12 @@ struct PurchaseView: View {
                     Text("Error")
                 }
                 Spacer()
+                
+                Text("If you have problems with payment, then write to smado@vsa.su")
+                    .font(.system(size: 14, weight: .thin, design: .default))
+                    .multilineTextAlignment(.center)
+                    .padding()
+                
                 Text("Recurring billing. Cancel any time. If you choose to purchase a subscription, payment will be charged to your iTunes account and your account will be charged for renewal 24 hours prior to the end of the current period unless auto-renew is turned off. Auto-renewal is managed by the user and may be turned off at any time by going to your settings in the iTunes Store after purchase. Any unused portion of a free trial period will be forfeited when the user purchases a subscription.")
                     .font(.system(size: 12, weight: .thin, design: .default))
                 Button("Terms & Privacy Policy") { showTerms = true }

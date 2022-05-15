@@ -53,7 +53,6 @@ struct DocumentsGridCellView: View {
                 }
                 .frame(width: frameWidth - 2 * padding, alignment: .leading)
                 
-                
             }
             .padding(padding)
             .frame(width: frameWidth, height: frameWidth, alignment: .center)
@@ -67,6 +66,7 @@ struct DocumentsGridCellView: View {
         .buttonStyle(.plain)
         
     }
+    
 }
 
 

@@ -22,7 +22,7 @@ struct DocumentDetailView: View {
     @State private var showDocumentPicker = false
     @State private var cameraSelectedFile: FileModel?
     @State private var files: [FileModel] = []
-//    @State private var refreshfilesID = UUID()
+    @State private var refreshFilesID = UUID()
     @State private var showDeleteAlert = false
     @State private var showBigFilesAlert = false
     @State private var bigFiles = ""
@@ -72,6 +72,7 @@ struct DocumentDetailView: View {
             }
             .navigationBarTitleDisplayMode(.inline)
         }
+//        .id(refreshFilesID)
         .interactiveDismissDisabled(true)
         
         .sheet(isPresented: $showCameraPicker) {
@@ -80,8 +81,11 @@ struct DocumentDetailView: View {
         .sheet(isPresented: $showImagePicker) {
             ImagePicker(files: $files)
         }
-        .documentPicker(isPresented: $showDocumentPicker, files: $files) { tempBigFiles in
-            bigfilesProcessing(tempBigFiles)
+//        .documentPicker(isPresented: $showDocumentPicker, files: $files) { tempBigFiles in
+//            bigfilesProcessing(tempBigFiles)
+//        }
+        .sheet(isPresented: $showDocumentPicker) {
+            DocumentPicker(files: $files, bigFiles: $bigFiles)
         }
         
         .onChange(of: cameraSelectedFile) {
@@ -90,6 +94,12 @@ struct DocumentDetailView: View {
         .onChange(of: files) {
             onChangeFile($0)
         }
+//        .onChange(of: document?.unwrapImages, perform: { newValue in
+//            refreshFilesID = UUID()
+//        })
+        .onChange(of: bigFiles, perform: { newValue in
+            showBigFilesAlert.toggle()
+        })
 
         .alert("Delete this document?", isPresented: $showDeleteAlert) {
             Button("Delete", role: .destructive) {
@@ -99,7 +109,7 @@ struct DocumentDetailView: View {
         .alert("Warning!", isPresented: $showBigFilesAlert) {
             
         } message: {
-            Text("These files are too big (over 2 MB): \n\n\(bigFiles)\nPlease reduce the file size, convert to image format, or choose other files.")
+            Text("These files are too big (over 4 MB): \n\n\(bigFiles)\nPlease reduce the file size, convert to image format, or choose other files.")
         }
         
     }
@@ -132,24 +142,24 @@ extension DocumentDetailView {
     }
     
     fileprivate func onChangeFile(_ newValue: [FileModel]) {
+        
         newValue.forEach { file in
             if let doc = document {
                 _ = CDStack.shared.createImage(document: doc, fileName: file.fileName, data: file.data)
             }
         }
         files = []
-//        refreshfilesID = UUID()
     }
     
     fileprivate func onChangeCameraFile(_ newValue: FileModel?) {
         if let newfile = newValue { files.append(newfile) }
     }
     
-    fileprivate func bigfilesProcessing(_ tempBigFiles: [String]) {
+    fileprivate func bigfilesProcessing(_ tempBigFiles: [(String, Int)]) {
         if !tempBigFiles.isEmpty {
             bigFiles = ""
             tempBigFiles.forEach { file in
-                bigFiles += file + "\n"
+                bigFiles += file.0 + NSLocalizedString(" (\(file.1/1_000_000) MB)" + "\n", comment: "bigFiles")
             }
             showBigFilesAlert.toggle()
         }
@@ -192,11 +202,8 @@ extension DocumentDetailView {
             .foregroundColor(.red)
         }
         ToolbarItem(placement: .principal) {
-            if let files = document?.images
-            {
-                Text("Files (\(files.count.description))")
-                    .font(.system(size: 14, weight: .thin, design: .default))
-            }
+            Text("Files (\(document?.unwrapImages.count.description ?? "0"))")
+                .font(.system(size: 14, weight: .thin, design: .default))
         }
         
     }
