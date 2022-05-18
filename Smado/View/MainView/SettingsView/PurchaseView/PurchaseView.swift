@@ -56,7 +56,7 @@ struct PurchaseView: View {
             }//Vstack
             .padding()
             
-        }//zstack
+        }//ScrollView
         .background(Color.primary.colorInvert().ignoresSafeArea())
         .navigationTitle("Choose plan")
         

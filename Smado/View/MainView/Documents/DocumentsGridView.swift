@@ -36,29 +36,26 @@ struct DocumentsGridView: View {
     
     var body: some View {
         
-        ZStack {
-            
-            ScrollView {
-                GradientLine()
-                LazyVGrid(columns: columns, alignment: .center, spacing: 12) {
-                    ForEach(category.unwrapDocuments.sorted {$0.dateEnd ?? Date() < $1.dateEnd ?? Date()}) { doc in
-                        DocumentsGridCellView(doc: doc, cellWidth: width) {
-                            selectedDocument = doc
-                            withAnimation { showModalView.toggle() }
-                        }
+        ScrollView {
+            GradientLine()
+            LazyVGrid(columns: columns, alignment: .center, spacing: 12) {
+                ForEach(category.unwrapDocuments.sorted {$0.dateEnd ?? Date() < $1.dateEnd ?? Date()}) { doc in
+                    DocumentsGridCellView(doc: doc, cellWidth: width) {
+                        selectedDocument = doc
+                        withAnimation { showModalView.toggle() }
                     }
                 }
-                .padding()
             }
-            
+            .padding()
+        }
+        .overlay(
             DocumentsPlusButton() {
                 withAnimation {
                     selectedDocument = CDStack.shared.createDocument(category: category, title: "", dateEnd: Date())
                     showAddDocument.toggle()
                 }
             }
-            
-        }
+        )
         .edgesIgnoringSafeArea(.bottom)
         .navigationTitle(category.title ?? "")
         

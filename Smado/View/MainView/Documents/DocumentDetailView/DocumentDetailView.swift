@@ -52,27 +52,25 @@ struct DocumentDetailView: View {
         
         NavigationView {
             
-            ZStack {
-                List {
-                    DocDataSection(title: $title, dateEnd: $dateEnd, category: $category)
-                        .listRowBackground(Color.primary.colorInvert())
-                    DocNotifSection(notifToday: $notifToday, notifWeek: $notifWeek, notifMonth: $notifMonth)
-                        .listRowBackground(Color.primary.colorInvert())
-                    DocFilesSection(document: $document)
-                        .listRowBackground(Color.primary.colorInvert())
-                }
-                .background(Color.primary.colorInvert())
-                .font(.system(size: 15, weight: .light, design: .default))
-                .listStyle(.plain)
-                
-                DocSaveButton(title: $title, isNewDocument: isNewDocument) { docSaveAction() }
+            List {
+                DocDataSection(title: $title, dateEnd: $dateEnd, category: $category)
+                    .listRowBackground(Color.primary.colorInvert())
+                DocNotifSection(notifToday: $notifToday, notifWeek: $notifWeek, notifMonth: $notifMonth)
+                    .listRowBackground(Color.primary.colorInvert())
+                DocFilesSection(document: $document)
+                    .listRowBackground(Color.primary.colorInvert())
             }
+            .overlay(
+                DocSaveButton(title: $title, isNewDocument: isNewDocument) { docSaveAction() }
+            )
+            .background(Color.primary.colorInvert())
+            .font(.system(size: 15, weight: .light, design: .default))
+            .listStyle(.plain)
             .toolbar {
                 toolbarButton()
             }
             .navigationBarTitleDisplayMode(.inline)
         }
-//        .id(refreshFilesID)
         .interactiveDismissDisabled(true)
         
         .sheet(isPresented: $showCameraPicker) {
@@ -107,7 +105,7 @@ struct DocumentDetailView: View {
             }
         }
         .alert("Warning!", isPresented: $showBigFilesAlert) {
-            
+            //default action
         } message: {
             Text("These files are too big (over 4 MB): \n\n\(bigFiles)\nPlease reduce the file size, convert to image format, or choose other files.")
         }

@@ -90,7 +90,6 @@ extension View {
                 if show.wrappedValue {
                     
                     ZStack {
-                        
                         Color.clear
                             .background(.ultraThinMaterial)
                         
@@ -101,7 +100,8 @@ extension View {
                             .cornerRadius(15)
                             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                         }
-                    }.ignoresSafeArea()
+                    }
+                    .ignoresSafeArea()
 
                 }
                 

@@ -49,7 +49,6 @@ struct ExpiredDocsGridView: View {
                 }
                 .padding()
             }
-            
         }
         .id(refreshID)
         .navigationTitle(ExpiredStatus.localize(status: status))
