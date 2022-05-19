@@ -35,8 +35,8 @@ struct DocumentsPlusButton: View {
                 }
             }
         }
-        .padding(.trailing, 16)
-        .padding(.bottom, 16)
+        .padding(.trailing, 20)
+        .padding(.bottom, 20)
     }
     
 }

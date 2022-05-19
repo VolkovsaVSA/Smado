@@ -18,6 +18,7 @@ struct HomeCategoriesGridView: View {
     @State private var showAddCategory = false
     @State private var showDeleteAlert = false
     @State private var deletingCategory: CategoryCD? = nil
+    @State private var refreshCategoryCountID = UUID()
     
     
     
@@ -27,9 +28,18 @@ struct HomeCategoriesGridView: View {
         List {
             
             Section( header:
-                        HomeCatHeader(categories: categories) {
-                withAnimation { showAddCategory.toggle() }
+                        
+                        
+                        HStack {
+                Text("Categories (\(categories.count.description))")
+                Spacer()
+                Button {
+                    showAddCategory.toggle()
+                } label: { Image(systemName: "plus") }
+                    .buttonStyle(.bordered)
             }
+                        
+       
             ) {
                 ForEach(categories) { category in
                     HomeCategoriesGridCell(category: category)
@@ -70,10 +80,14 @@ extension HomeCategoriesGridView {
     fileprivate func deleteCatAlertAction() {
         withAnimation {
             if let cat = deletingCategory {
-                viewContext.delete(cat)
+                DispatchQueue.main.async {
+                    viewContext.delete(cat)
+                }
                 CDStack.shared.saveContext(context: viewContext)
+                refreshCategoryCountID = UUID()
             }
         }
+        
     }
     
 }

@@ -20,54 +20,56 @@ struct DocFilesSection: View {
     
     var body: some View {
         
-        Section(header: Text("Files")) {
+        if let images = document?.unwrapImages {
             
-            if let document = document {
+            if !images.isEmpty {
                 
-                ForEach(document.unwrapImages) { image in
-                    VStack {
-                        Text(image.fileName ?? "no file name")
-                            .font(.system(size: 12, weight: .thin, design: .default))
-                        
-                        if image.fileExtention?.lowercased() == "pdf" {
-                            if let data = image.data {
-                                PDFKitView(data: data, singlePage: false)
-                                    .frame(height: height)
+                Section(header: Text("Files (\(images.count))")) {
+                    
+                    ForEach(images) { image in
+                        VStack {
+                            Text(image.fileName ?? "no file name")
+                                .font(.system(size: 12, weight: .thin, design: .default))
+                            
+                            if image.fileExtention?.lowercased() == "pdf" {
+                                if let data = image.data {
+                                    PDFKitView(data: data, singlePage: false)
+                                        .frame(height: height)
+                                } else {
+                                    Image(systemName: "eye.slash")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .foregroundColor(Color("imageFrameColor"))
+                                }
                             } else {
-                                Image(systemName: "eye.slash")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .foregroundColor(Color("imageFrameColor"))
+                                DocumentImage(image: image)
                             }
-                        } else {
-                            DocumentImage(image: image)
+                            
                         }
+                        .onTapGesture { tapToFile(image: image) }
+                        .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                            Button(role: .destructive) {
+                                withAnimation {
+                                    viewContext.delete(image)
+                                    refreshfilesID = UUID()
+                                }
+                            } label: {
+                                Label("", systemImage: "trash")
+                            }
+                        }
+                    }//ForEach
+                    .id(refreshfilesID)
+
+                    MockSpaceInList(height: 50)
                         
-                    }
-                    
-                    .onTapGesture { tapToFile(image: image) }
-                    
-                    .swipeActions(edge: .trailing, allowsFullSwipe: true) {
-                        Button(role: .destructive) {
-                            withAnimation {
-                                viewContext.delete(image)
-                                refreshfilesID = UUID()
-                            }
-                        } label: {
-                            Label("", systemImage: "trash")
-                        }
-                    }
-                }//ForEach
-//                .onMove(perform: onMove)
-                .id(refreshfilesID)
-//
-                MockSpaceInList(height: 50)
+                }//section
+//                .edgesIgnoringSafeArea(.bottom)
+                .listRowSeparator(.hidden)
+                .quickLookPreview($tempUrl)
                 
-            }//if let images = document?.images?.allObjects
+            }
             
-        }//section
-        .listRowSeparator(.hidden)
-        .quickLookPreview($tempUrl)
+        }
         
     }
 }

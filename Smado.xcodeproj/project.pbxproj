@@ -56,6 +56,7 @@
 		C8B99D3F282F9ED500C7999E /* DocumentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B99D3E282F9ED500C7999E /* DocumentPicker.swift */; };
 		C8BF8775282ACA420074E736 /* MockSpaceInList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BF8774282ACA420074E736 /* MockSpaceInList.swift */; };
 		C8BF8777282AFDA00074E736 /* TermsConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BF8776282AFDA00074E736 /* TermsConditions.swift */; };
+		C8CA1F0C283595C300FA477E /* DocInfSectionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CA1F0B283595C300FA477E /* DocInfSectionStyle.swift */; };
 		C8CF90D6280FE53C0028372A /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CF90D5280FE53C0028372A /* StoreManager.swift */; };
 		C8CF90D9281018450028372A /* SettingsToggleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CF90D8281018450028372A /* SettingsToggleCell.swift */; };
 		C8CF90DB281018900028372A /* BackupSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CF90DA281018900028372A /* BackupSection.swift */; };
@@ -169,6 +170,7 @@
 		C8BAEB80283118DB00176FAB /* hr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hr; path = hr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C8BF8774282ACA420074E736 /* MockSpaceInList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSpaceInList.swift; sourceTree = "<group>"; };
 		C8BF8776282AFDA00074E736 /* TermsConditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsConditions.swift; sourceTree = "<group>"; };
+		C8CA1F0B283595C300FA477E /* DocInfSectionStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocInfSectionStyle.swift; sourceTree = "<group>"; };
 		C8CF90D5280FE53C0028372A /* StoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 		C8CF90D7281007810028372A /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
 		C8CF90D8281018450028372A /* SettingsToggleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsToggleCell.swift; sourceTree = "<group>"; };
@@ -418,6 +420,7 @@
 				C896E4E728174C4400E75E8D /* AppID.swift */,
 				C832DEAC280CAB6300B895DD /* UDKeys.swift */,
 				C875FDEB282182F5003F7E92 /* ImageHelper.swift */,
+				C8CA1F0B283595C300FA477E /* DocInfSectionStyle.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -610,6 +613,7 @@
 				C8845A59282C3C74009D71EC /* ImageCD+CoreDataClass.swift in Sources */,
 				C8BF8775282ACA420074E736 /* MockSpaceInList.swift in Sources */,
 				C896E4E828174C4400E75E8D /* AppID.swift in Sources */,
+				C8CA1F0C283595C300FA477E /* DocInfSectionStyle.swift in Sources */,
 				C8CF90F228119E1B0028372A /* DocSaveButton.swift in Sources */,
 				C8AD61CF27AD6FF7002DA72D /* SmadoApp.swift in Sources */,
 				C861C4D027B70FAC002A588B /* HomeExpDocsGridCell.swift in Sources */,
@@ -845,7 +849,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Smado/Smado.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"Smado/Preview Content\"";
 				DEVELOPMENT_TEAM = 7C46924T49;
 				ENABLE_PREVIEWS = YES;
@@ -880,7 +884,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Smado/Smado.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"Smado/Preview Content\"";
 				DEVELOPMENT_TEAM = 7C46924T49;
 				ENABLE_PREVIEWS = YES;

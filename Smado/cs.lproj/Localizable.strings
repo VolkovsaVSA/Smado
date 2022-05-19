@@ -56,6 +56,9 @@
 "Document data" = "Data dokumentu";
 
 /* No comment provided by engineer. */
+"Edit" = "Upravit";
+
+/* No comment provided by engineer. */
 "Error" = "Chyba";
 
 /* (No Comment) */
@@ -71,10 +74,7 @@
 "Feedback on application \"Smado\"" = "Zpětná vazba k aplikaci \"Smado\"";
 
 /* No comment provided by engineer. */
-"Files" = "Soubory";
-
-/* No comment provided by engineer. */
-"Files (%@)" = "Soubory (%@)";
+"Files (%lld)" = "Soubory (%lld)";
 
 /* No comment provided by engineer. */
 "For backups please login into your account in ios settings" = "Pro zálohování se prosím přihlaste ke svému účtu v nastavení ios";
@@ -159,4 +159,7 @@
 
 /* No comment provided by engineer. */
 "You have not given permission to send notifications from this app. Please turn on notifications for this app in ios settings." = "Neudělili jste oprávnění odesílat oznámení z této aplikace. Zapněte prosím upozornění pro tuto aplikaci v nastavení ios.";
+
+/* No comment provided by engineer. */
+"You have this subscription until %@" = "Toto předplatné máte až do %@";
 

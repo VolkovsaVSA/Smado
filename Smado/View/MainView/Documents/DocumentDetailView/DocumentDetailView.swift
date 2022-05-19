@@ -52,24 +52,28 @@ struct DocumentDetailView: View {
         
         NavigationView {
             
-            List {
-                DocDataSection(title: $title, dateEnd: $dateEnd, category: $category)
-                    .listRowBackground(Color.primary.colorInvert())
-                DocNotifSection(notifToday: $notifToday, notifWeek: $notifWeek, notifMonth: $notifMonth)
-                    .listRowBackground(Color.primary.colorInvert())
-                DocFilesSection(document: $document)
-                    .listRowBackground(Color.primary.colorInvert())
-            }
-            .overlay(
+            ZStack {
+
+                List {
+                    DocDataSection(title: $title, dateEnd: $dateEnd, category: $category)
+                        .listRowBackground(Color.primary.colorInvert())
+                    DocNotifSection(notifToday: $notifToday, notifWeek: $notifWeek, notifMonth: $notifMonth)
+                        .listRowBackground(Color.primary.colorInvert())
+                    DocFilesSection(document: $document)
+                        .listRowBackground(Color.primary.colorInvert())
+                }
+                
                 DocSaveButton(title: $title, isNewDocument: isNewDocument) { docSaveAction() }
-            )
-            .background(Color.primary.colorInvert())
+            }
+            .background(Color.primary.colorInvert().ignoresSafeArea())
             .font(.system(size: 15, weight: .light, design: .default))
-            .listStyle(.plain)
+            .listStyle(.grouped)
             .toolbar {
                 toolbarButton()
             }
-            .navigationBarTitleDisplayMode(.inline)
+//            .navigationBarTitleDisplayMode(.inline)
+            .navigationTitle("Edit")
+//            .navigationBar(backgroundColor: Color.yellow, titleColor: Color.primary)
         }
         .interactiveDismissDisabled(true)
         
@@ -199,10 +203,10 @@ extension DocumentDetailView {
             }
             .foregroundColor(.red)
         }
-        ToolbarItem(placement: .principal) {
-            Text("Files (\(document?.unwrapImages.count.description ?? "0"))")
-                .font(.system(size: 14, weight: .thin, design: .default))
-        }
+//        ToolbarItem(placement: .principal) {
+//            Text("Document data")
+////                .font(.system(size: 14, weight: .thin, design: .default))
+//        }
         
     }
     

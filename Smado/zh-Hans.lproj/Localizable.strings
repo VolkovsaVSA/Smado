@@ -56,6 +56,9 @@
 "Document data" = "文件数据";
 
 /* No comment provided by engineer. */
+"Edit" = "编辑";
+
+/* No comment provided by engineer. */
 "Error" = "错误";
 
 /* (No Comment) */
@@ -71,10 +74,7 @@
 "Feedback on application \"Smado\"" = "对应用程序“Smado”的反馈";
 
 /* No comment provided by engineer. */
-"Files" = "文件";
-
-/* No comment provided by engineer. */
-"Files (%@)" = "文件 (%@)";
+"Files (%lld)" = "文件(%lld)";
 
 /* No comment provided by engineer. */
 "For backups please login into your account in ios settings" = "如需备份，请在 ios 设置中登录您的帐户";

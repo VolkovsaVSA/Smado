@@ -45,23 +45,34 @@ extension View {
             callBack(bigFiles)
             
         }
-//        .onDisappear() {
-//            files.wrappedValue = []
-//        }
+
+    }
+    
+    func navigationBar(backgroundColor: Color, titleColor: Color) -> some View {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithTransparentBackground()
+        appearance.backgroundColor = UIColor(backgroundColor)
+        
+        let uiTitleColor = UIColor(titleColor)
+        appearance.largeTitleTextAttributes = [.foregroundColor: uiTitleColor]
+        appearance.titleTextAttributes = [.foregroundColor: uiTitleColor]
+        
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        
+        return self
     }
     
     //styles
-    func categoriesCellStyle(padding: CGFloat) -> some View {
+    func newDocSectionStyle(height: CGFloat? = nil) -> some View {
         self
-            .padding(padding)
+            .frame(height: height)
+            .padding()
             .background(
                 Color(UIColor.tertiarySystemBackground)
                     .cornerRadius(12)
                     .shadow(color: .black.opacity(0.2), radius: 6, x: 0, y: 3)
             )
-    }
-    func newDocSectionStyle() -> some View {
-        self.categoriesCellStyle(padding: 12)
     }
     
     func gridCellStyle(width: CGFloat) -> some View {

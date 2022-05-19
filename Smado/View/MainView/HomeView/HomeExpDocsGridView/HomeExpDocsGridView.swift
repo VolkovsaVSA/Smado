@@ -27,7 +27,24 @@ struct HomeExpDocsGridView: View {
                         NavigationLink {
                             ExpiredDocsGridView(docs: CDStack.shared.filterdocs(documents: documents, expiresStatus: item.status), expiredStatus: item.status)
                         } label: {
-                            HomeExpDocsGridCell(item: item, documents: documents, width: width)
+//                            HomeExpDocsGridCell(item: item, documents: documents, width: width)
+                            
+                            VStack(alignment: .leading, spacing: 4) {
+                                HStack {
+                                    IconImageView(image: item.image, color: item.color, imageScale: 16)
+                                    Spacer()
+                                    Text(CDStack.shared.filterdocs(documents: documents, expiresStatus: item.status).count.description)
+                                        .font(.system(size: 24))
+                                        .fontWeight(.bold)
+                                }
+                                
+                                Text(ExpiredStatus.localize(status: item.status))
+                                    .font(.system(size: 14, weight: .light, design: .default))
+                                    .foregroundColor(.secondary)
+                            }
+                            .gridCellStyle(width: width)
+                            
+                            
                         }
                         .buttonStyle(.plain)
                     }

@@ -8,6 +8,7 @@
 import CoreData
 import SwiftUI
 
+
 class CDStack {
     static let shared = CDStack()
     private init() {}
@@ -183,7 +184,7 @@ class CDStack {
                 return documents.filter { document in
                     if let docDate = document.dateEnd {
                         return Date().addOrSubtructDay(day: 8) >= docDate
-                        && Date().addOrSubtructDay(day: 1) <= docDate
+                        && Date().addOrSubtructDay(day: 0) <= docDate
                     } else {
                         return false
                     }

@@ -20,31 +20,60 @@ struct DocDataSection: View {
     @Binding var category: CategoryCD?
     
     var body: some View {
+        
         Section(header: Text("Document data")) {
-            VStack {
-                TextField("Title", text: $title)
-                    .font(.system(size: 16, weight: .bold, design: .default))
-                    .textFieldStyle(.roundedBorder)
-                    .submitLabel(.done)
-                DatePicker("Deadline", selection: $dateEnd, in: Date()..., displayedComponents: [.date])
-                    .font(.system(size: 15, weight: .light, design: .default))
-                HStack {
-                    Text("Category")
-                        .font(.system(size: 15, weight: .light, design: .default))
-                    Spacer()
-                    Picker("", selection: $category) {
-                        ForEach(categories) { cat in
-                            Text(cat.title ?? "").tag(cat as CategoryCD?)
-                        }
+            
+            TextField("Title", text: $title)
+                .font(.system(size: 16, weight: .bold, design: .default))
+                .submitLabel(.done)
+            DatePicker("Deadline", selection: $dateEnd, in: Date()..., displayedComponents: [.date])
+            HStack {
+                Text("Category")
+                Spacer()
+                Picker("", selection: $category) {
+                    ForEach(categories) { cat in
+                        Text(cat.title ?? "").tag(cat as CategoryCD?)
                     }
-                    .pickerStyle(.menu)
                 }
+                .pickerStyle(.menu)
             }
+            
+            
+            
+            
+            
+//            HStack {
+//                VStack(alignment: .leading, spacing: 2) {
+//                    Text("Title")
+//                        .font(.system(size: 12, weight: .thin, design: .default))
+//                    TextField("Enter the title", text: $title)
+//                        .font(.system(size: 16, weight: .bold, design: .default))
+//                        .submitLabel(.done)
+//                        .frame(height: 36)
+//                }
+//                VStack(alignment: .trailing, spacing: 2) {
+//                    Text("Deadline")
+//                        .font(.system(size: 12, weight: .thin, design: .default))
+//                    DatePicker("", selection: $dateEnd, in: Date()..., displayedComponents: [.date])
+//                        .frame(height: 36)
+//                }
+//            }
 //            .newDocSectionStyle()
-
+//
+//            HStack {
+//                Text("Category")
+//                Spacer()
+//                Picker("", selection: $category) {
+//                    ForEach(categories) { cat in
+//                        Text(cat.title ?? "").tag(cat as CategoryCD?)
+//                    }
+//                }
+//                .pickerStyle(.menu)
+//            }
+//            .newDocSectionStyle()
         }
-        .ignoresSafeArea()
         .listRowSeparator(.hidden)
     }
+    
 }
 

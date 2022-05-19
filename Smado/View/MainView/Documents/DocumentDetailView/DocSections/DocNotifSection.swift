@@ -20,15 +20,16 @@ struct DocNotifSection: View {
                     .lineLimit(2)
                     .multilineTextAlignment(.leading)
                 Spacer()
-                Toggle("01", isOn: $notifToday).tint(.red)
-                Toggle("07", isOn: $notifWeek).tint(.yellow)
+                Toggle("01", isOn: $notifToday)
+//                    .tint(.red)
+                Toggle("07", isOn: $notifWeek)
+//                    .tint(.yellow)
                 Toggle("30", isOn: $notifMonth)
             }
             .toggleStyle(.button)
 //            .newDocSectionStyle()
             
         }
-        .ignoresSafeArea()
         .listRowSeparator(.hidden)
     }
 }

@@ -56,6 +56,9 @@
 "Document data" = "Dati del documento";
 
 /* No comment provided by engineer. */
+"Edit" = "Modificare";
+
+/* No comment provided by engineer. */
 "Error" = "Errore";
 
 /* (No Comment) */
@@ -71,10 +74,7 @@
 "Feedback on application \"Smado\"" = "Feedback sull'applicazione \"Smado\"";
 
 /* No comment provided by engineer. */
-"Files" = "File";
-
-/* No comment provided by engineer. */
-"Files (%@)" = "File (%@)";
+"Files (%lld)" = "File (%lld)";
 
 /* No comment provided by engineer. */
 "For backups please login into your account in ios settings" = "Per i backup, accedi al tuo account nelle impostazioni di iOS";

@@ -56,6 +56,9 @@
 "Document data" = "Дані документа";
 
 /* No comment provided by engineer. */
+"Edit" = "Редагувати";
+
+/* No comment provided by engineer. */
 "Error" = "Помилка";
 
 /* (No Comment) */
@@ -69,12 +72,6 @@
 
 /* (No Comment) */
 "Feedback on application \"Smado\"" = "Відгук про програму \"Smado\"";
-
-/* No comment provided by engineer. */
-"Files" = "Файли";
-
-/* No comment provided by engineer. */
-"Files (%@)" = "Файли (%@)";
 
 /* No comment provided by engineer. */
 "For backups please login into your account in ios settings" = "Щоб створити резервні копії, увійдіть до свого облікового запису в налаштуваннях iOS.";

@@ -1,3 +1,162 @@
+/* bigfiles */
+" MB)\n" = "MB)\n";
+
 /* No comment provided by engineer. */
-"%@ at %@/month. Save %@" = "%@ at %@/month. Saving %@";
+"%@ at %@/month. Save %@" = "%@ at %@ / mesiac. Úspora %@";
+
+/* localizedPeriod */
+"6 months" = "6 mesiacov";
+
+/* localizedPeriod */
+"12 months" = "12 mesiacov";
+
+/* No comment provided by engineer. */
+"Attention!" = "Pozor!";
+
+/* No comment provided by engineer. */
+"Back" = "späť";
+
+/* (No Comment) */
+"Backup" = "Zálohovanie";
+
+/* No comment provided by engineer. */
+"By downloading or using the app, these terms will automatically apply to you – you should make sure therefore that you read them carefully before using the app. You’re not allowed to copy, or modify the app, any part of the app, or our trademarks in any way. You’re not allowed to attempt to extract the source code of the app, and you also shouldn’t try to translate the app into other languages, or make derivative versions. The app itself, and all the trade marks, copyright, database rights and other intellectual property rights related to it, still belong to Sergei Volkov.\n\nSergei Volkov is committed to ensuring that the app is as useful and efficient as possible. For that reason, we reserve the right to make changes to the app or to charge for its services, at any time and for any reason. We will never charge you for the app or its services without making it very clear to you exactly what you’re paying for.\n\nThe Smado app stores and processes personal data that you have provided to us, in order to provide my Service. It’s your responsibility to keep your phone and access to the app secure. We therefore recommend that you do not jailbreak or root your phone, which is the process of removing software restrictions and limitations imposed by the official operating system of your device. It could make your phone vulnerable to malware/viruses/malicious programs, compromise your phone’s security features and it could mean that the Smado app won’t work properly or at all.\n\nYou should be aware that there are certain things that Sergei Volkov will not take responsibility for. Certain functions of the app will require the app to have an active internet connection. The connection can be Wi-Fi, or provided by your mobile network provider, but Sergei Volkov cannot take responsibility for the app not working at full functionality if you don’t have access to Wi-Fi, and you don’t have any of your data allowance left.\n\nIf you’re using the app outside of an area with Wi-Fi, you should remember that your terms of the agreement with your mobile network provider will still apply. As a result, you may be charged by your mobile provider for the cost of data for the duration of the connection while accessing the app, or other third party charges. In using the app, you’re accepting responsibility for any such charges, including roaming data charges if you use the app outside of your home territory (i.e. region or country) without turning off data roaming. If you are not the bill payer for the device on which you’re using the app, please be aware that we assume that you have received permission from the bill payer for using the app.\n\nAlong the same lines, Sergei Volkov cannot always take responsibility for the way you use the app i.e. You need to make sure that your device stays charged – if it runs out of battery and you can’t turn it on to avail the Service, Sergei Volkov cannot accept responsibility.\n\nWith respect to Sergei Volkov’s responsibility for your use of the app, when you’re using the app, it’s important to bear in mind that although we endeavour to ensure that it is updated and correct at all times, we do rely on third parties to provide information to us so that we can make it available to you. Sergei Volkov accepts no liability for any loss, direct or indirect, you experience as a result of relying wholly on this functionality of the app.\n\nAt some point, we may wish to update the app. The app is currently available on iOS – the requirements for system(and for any additional systems we decide to extend the availability of the app to) may change, and you’ll need to download the updates if you want to keep using the app. Sergei Volkov does not promise that it will always update the app so that it is relevant to you and/or works with the iOS version that you have installed on your device. However, you promise to always accept updates to the application when offered to you, We may also wish to stop providing the app, and may terminate use of it at any time without giving notice of termination to you. Unless we tell you otherwise, upon any termination, (a) the rights and licenses granted to you in these terms will end; (b) you must stop using the app, and (if needed) delete it from your device.\n\nChanges to This Terms and Conditions\nI may update our Terms and Conditions from time to time. Thus, you are advised to review this page periodically for any changes. I will notify you of any changes by posting the new Terms and Conditions on this page.\n\nThese terms and conditions are effective as of 2022-05-16\n\nContact Us\nIf you have any questions or suggestions about my Terms and Conditions, do not hesitate to contact me at smado@vsa.su.\n\n" = "Stiahnutím alebo používaním aplikácie sa na vás budú tieto podmienky automaticky vzťahovať – mali by ste sa preto uistiť, že ste si ich pred použitím aplikácie pozorne prečítali. Nie je dovolené žiadnym spôsobom kopírovať ani upravovať aplikáciu, žiadnu časť aplikácie ani naše ochranné známky. Nemáte dovolené pokúšať sa extrahovať zdrojový kód aplikácie a tiež by ste sa nemali pokúšať prekladať aplikáciu do iných jazykov alebo vytvárať odvodené verzie. Samotná aplikácia a všetky ochranné známky, autorské práva, práva na databázy a ďalšie práva duševného vlastníctva s ňou súvisiace stále patria Sergejovi Volkovovi.\n\nSergei Volkov sa zaviazal zabezpečiť, aby bola aplikácia čo najužitočnejšia a najefektívnejšia. Z tohto dôvodu si vyhradzujeme právo kedykoľvek a z akéhokoľvek dôvodu vykonať zmeny v aplikácii alebo účtovať poplatky za jej služby. Nikdy vám nebudeme účtovať poplatky za aplikáciu alebo jej služby bez toho, aby sme vám presne vysvetlili, za čo platíte.\n\nAplikácia Smado ukladá a spracúva osobné údaje, ktoré ste nám poskytli, za účelom poskytovania mojej Služby. Je vašou zodpovednosťou udržiavať svoj telefón a prístup k aplikácii v bezpečí. Preto odporúčame, aby ste svoj telefón nerobili útek z väzenia ani rootovanie, čo je proces odstránenia softvérových obmedzení a obmedzení, ktoré ukladá oficiálny operačný systém vášho zariadenia. Mohlo by to spôsobiť, že váš telefón bude zraniteľný voči malvéru/vírusom/škodlivým programom, ohrozí to bezpečnostné funkcie vášho telefónu a môže to znamenať, že aplikácia Smado nebude fungovať správne alebo vôbec.\n\nMali by ste si uvedomiť, že sú určité veci, za ktoré Sergej Volkov nenesie zodpovednosť. Niektoré funkcie aplikácie budú vyžadovať, aby mala aplikácia aktívne internetové pripojenie. Pripojenie môže byť Wi-Fi alebo poskytované vaším poskytovateľom mobilnej siete, ale Sergej Volkov nemôže prevziať zodpovednosť za to, že aplikácia nefunguje v plnej miere, ak nemáte prístup k Wi-Fi a nemáte žiadne váš dátový limit zostáva.\n\nAk aplikáciu používate mimo oblasti s Wi-Fi, mali by ste pamätať na to, že stále budú platiť vaše podmienky zmluvy s vaším poskytovateľom mobilnej siete. V dôsledku toho vám môže váš mobilný operátor účtovať poplatky za dáta počas trvania pripojenia počas prístupu k aplikácii alebo iné poplatky tretích strán. Používaním aplikácie preberáte zodpovednosť za všetky takéto poplatky vrátane poplatkov za dátový roaming, ak aplikáciu používate mimo svojho domáceho územia (t. j. regiónu alebo krajiny) bez vypnutia dátového roamingu. Ak nie ste platiteľom účtu za zariadenie, na ktorom aplikáciu používate, uvedomte si, že predpokladáme, že ste od platiteľa účtu dostali povolenie na používanie aplikácie.\n\nRovnako tak Sergej Volkov nemôže vždy prevziať zodpovednosť za spôsob, akým aplikáciu používate, t. j. musíte sa uistiť, že vaše zariadenie zostane nabité – ak sa mu vybije batéria a nebudete ho môcť zapnúť, aby ste mohli využívať službu, Sergej Volkov nemôže prijať zodpovednosť.\n\nVzhľadom na zodpovednosť Sergeja Volkova za vaše používanie aplikácie, keď ju používate, je dôležité mať na pamäti, že hoci sa snažíme zabezpečiť, aby bola vždy aktualizovaná a správna, spoliehame sa na tretie strany, poskytnúť nám informácie, aby sme vám ich mohli sprístupniť. Sergei Volkov nenesie žiadnu zodpovednosť za akúkoľvek stratu, priamu alebo nepriamu, ktorú zažijete v dôsledku spoliehania sa na túto funkčnosť aplikácie.\n\nV určitom okamihu možno budeme chcieť aplikáciu aktualizovať. Aplikácia je momentálne dostupná pre iOS – požiadavky na systém (a pre všetky ďalšie systémy, na ktoré sa rozhodneme rozšíriť dostupnosť aplikácie) sa môžu zmeniť a ak chcete aplikáciu naďalej používať, budete si musieť stiahnuť aktualizácie. Sergei Volkov nesľubuje, že bude vždy aktualizovať aplikáciu tak, aby bola pre vás relevantná a/alebo fungovala s verziou iOS, ktorú máte nainštalovanú na svojom zariadení. Sľubujete však, že vždy prijmete aktualizácie aplikácie, keď vám budú ponúknuté. Môžeme tiež chcieť prestať poskytovať aplikáciu a môžeme ju kedykoľvek ukončiť bez oznámenia o ukončení. Ak vám nepovieme inak, pri akomkoľvek ukončení (a) práva a licencie, ktoré vám boli udelené v týchto podmienkach, zaniknú; (b) musíte prestať používať aplikáciu a (ak je to potrebné) odstrániť ju zo svojho zariadenia.\n\nZmeny týchto zmluvných podmienok\nZ času na čas môžem aktualizovať naše zmluvné podmienky. Preto vám odporúčame pravidelne kontrolovať túto stránku, či neobsahuje nejaké zmeny. O akýchkoľvek zmenách vás budem informovať zverejnením nových Zmluvných podmienok na tejto stránke.\n\nTieto obchodné podmienky sú účinné od 16.05.2022\n\nKontaktuj nás\nAk máte akékoľvek otázky alebo návrhy týkajúce sa mojich zmluvných podmienok, neváhajte ma kontaktovať na smado@vsa.su.";
+
+/* No comment provided by engineer. */
+"Cancel" = "Zrušiť";
+
+/* No comment provided by engineer. */
+"Categories (%@)" = "Kategórie (%@)";
+
+/* No comment provided by engineer. */
+"Category" = "Kategória";
+
+/* No comment provided by engineer. */
+"Choose plan" = "Vyberte plán";
+
+/* No comment provided by engineer. */
+"Create" = "Vytvorte";
+
+/* No comment provided by engineer. */
+"Data backup available by subscription only" = "Zálohovanie dát je k dispozícii iba na základe predplatného";
+
+/* No comment provided by engineer. */
+"Days before deadline" = "Dni pred termínom";
+
+/* No comment provided by engineer. */
+"Deadline" = "Konečný termín";
+
+/* No comment provided by engineer. */
+"Delete" = "Odstrániť";
+
+/* No comment provided by engineer. */
+"Delete this document?" = "Odstrániť tento dokument?";
+
+/* No comment provided by engineer. */
+"Document data" = "Údaje o dokumente";
+
+/* No comment provided by engineer. */
+"Edit" = "Upraviť";
+
+/* No comment provided by engineer. */
+"Error" = "Chyba";
+
+/* (No Comment) */
+"Expired" = "Platnosť vypršala";
+
+/* No comment provided by engineer. */
+"Expires:" = "Platnosť vyprší:";
+
+/* No comment provided by engineer. */
+"Feedback" = "Spätná väzba";
+
+/* (No Comment) */
+"Feedback on application \"Smado\"" = "Spätná väzba k aplikácii \"Smado\"";
+
+/* No comment provided by engineer. */
+"Files (%lld)" = "Súbory (%lld)";
+
+/* No comment provided by engineer. */
+"For backups please login into your account in ios settings" = "Pre zálohovanie sa prosím prihláste do svojho účtu v nastaveniach ios";
+
+/* No comment provided by engineer. */
+"Go to settings" = "Choď do nastavení";
+
+/* No comment provided by engineer. */
+"If you delete this category, all related documents will be deleted! Are you sure?" = "Ak vymažete túto kategóriu, vymažú sa všetky súvisiace dokumenty! Si si istý?";
+
+/* No comment provided by engineer. */
+"If you have problems with payment, then write to smado@vsa.su" = "Ak máte problémy s platbou, napíšte na smado@vsa.su";
+
+/* (No Comment) */
+"less 7 days" = "menej 7 dní";
+
+/* (No Comment) */
+"less 30 days" = "menej 30 dní";
+
+/* localizedPeriod */
+"month" = "mesiac";
+
+/* No comment provided by engineer. */
+"Notification" = "Oznámenie";
+
+/* (No Comment) */
+"Notifications" = "Upozornenia";
+
+/* No comment provided by engineer. */
+"Notifications time" = "Čas upozornení";
+
+/* (No Comment) */
+"Other applications" = "Iné aplikácie";
+
+/* No comment provided by engineer. */
+"Privacy Policy" = "Zásady ochrany osobných údajov";
+
+/* No comment provided by engineer. */
+"Purchases" = "Nákupy";
+
+/* No comment provided by engineer. */
+"Purchasing subscription you get backuping your data." = "Zakúpením predplatného získate zálohu vašich dát.";
+
+/* (No Comment) */
+"Rate the app" = "Ohodnoťte aplikáciu";
+
+/* No comment provided by engineer. */
+"Recurring billing. Cancel any time. If you choose to purchase a subscription, payment will be charged to your iTunes account and your account will be charged for renewal 24 hours prior to the end of the current period unless auto-renew is turned off. Auto-renewal is managed by the user and may be turned off at any time by going to your settings in the iTunes Store after purchase. Any unused portion of a free trial period will be forfeited when the user purchases a subscription." = "Opakujúce sa účtovanie. Zrušiť kedykoľvek. Ak sa rozhodnete zakúpiť predplatné, platba bude účtovaná na váš účet iTunes a váš účet bude účtovaný za obnovenie 24 hodín pred koncom aktuálneho obdobia, pokiaľ nie je vypnuté automatické obnovenie. Automatické obnovenie spravuje používateľ a môžete ho kedykoľvek vypnúť v nastaveniach v obchode iTunes Store po zakúpení. Akákoľvek nevyužitá časť bezplatného skúšobného obdobia prepadne, keď si používateľ zakúpi predplatné.";
+
+/* No comment provided by engineer. */
+"Save" = "Uložiť";
+
+/* (No Comment) */
+"Send email to the developer" = "Pošlite e-mail vývojárovi";
+
+/* No comment provided by engineer. */
+"Sergei Volkov built the Smado app as a Free app. This SERVICE is provided by Sergei Volkov at no cost and is intended for use as is.\n\nThis page is used to inform visitors regarding my policies with the collection, use, and disclosure of Personal Information if anyone decided to use my Service.\n\nIf you choose to use my Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that I collect is used for providing and improving the Service. I will not use or share your information with anyone except as described in this Privacy Policy.\n\nThe terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible at Smado unless otherwise defined in this Privacy Policy.\n\nInformation Collection and Use\nFor a better experience, while using our Service, I may require you to provide us with certain personally identifiable information. The information that I request will be retained on your device and is not collected by me in any way.\n\nLog Data\nI want to inform you that whenever you use my Service, in a case of an error in the app I collect data and information (through third party products) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol (“IP”) address, device name, operating system version, the configuration of the app when utilizing my Service, the time and date of your use of the Service, and other statistics.\n\nCookies\nCookies are files with a small amount of data that are commonly used as anonymous unique identifiers. These are sent to your browser from the websites that you visit and are stored on your device's internal memory.\nThis Service does not use these “cookies” explicitly. However, the app may use third party code and libraries that use “cookies” to collect information and improve their services. You have the option to either accept or refuse these cookies and know when a cookie is being sent to your device. If you choose to refuse our cookies, you may not be able to use some portions of this Service.\n\nService Providers\nI may employ third-party companies and individuals due to the following reasons:\nTo facilitate our Service;\nTo provide the Service on our behalf;\nTo perform Service-related services;\nTo assist us in analyzing how our Service is used.\nI want to inform users of this Service that these third parties have access to your Personal Information. The reason is to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or use the information for any other purpose.\n\nSecurity\nI value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and I cannot guarantee its absolute security.\n\nLinks to Other Sites\nThis Service may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by me. Therefore, I strongly advise you to review the Privacy Policy of these websites. I have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.\n\nChildren’s Privacy\nThese Services do not address anyone under the age of 13. I do not knowingly collect personally identifiable information from children under 13. In the case I discover that a child under 13 has provided me with personal information, I immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact me so that I will be able to do necessary actions.\n\nChanges to This Privacy Policy\nI may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. I will notify you of any changes by posting the new Privacy Policy on this page.\n\nThis policy is effective as of 2022-05-16\n\nContact Us\nIf you have any questions or suggestions about my Privacy Policy, do not hesitate to contact me at smado@vsa.su." = "Sergei Volkov vytvoril aplikáciu Smado ako bezplatnú aplikáciu. Túto SLUŽBU poskytuje Sergei Volkov bezplatne a je určená na používanie tak, ako je.\n\nTáto stránka slúži na informovanie návštevníkov o mojich zásadách týkajúcich sa zhromažďovania, používania a zverejňovania osobných údajov, ak sa niekto rozhodne používať moju službu.\n\nAk sa rozhodnete používať moju službu, súhlasíte so zhromažďovaním a používaním informácií v súvislosti s týmito zásadami. Osobné údaje, ktoré zhromažďujem, sa používajú na poskytovanie a zlepšovanie Služby. Nebudem používať ani zdieľať vaše informácie s nikým, s výnimkou prípadov popísaných v týchto zásadách ochrany osobných údajov.\n\nPojmy použité v týchto Zásadách ochrany osobných údajov majú rovnaký význam ako v našich Zmluvných podmienkach, ktoré sú dostupné na Smado, pokiaľ nie je v týchto Zásadách ochrany osobných údajov uvedené inak.\n\nZhromažďovanie a používanie informácií\nV záujme lepšieho zážitku pri používaní našej Služby vás môžem požiadať, aby ste nám poskytli určité osobné údaje. Informácie, ktoré požadujem, budú uchované vo vašom zariadení a žiadnym spôsobom ich nezhromažďujem.\n\nÚdaje denníka\nChcem vás informovať, že vždy, keď používate moju Službu, v prípade chyby v aplikácii zhromažďujem údaje a informácie (prostredníctvom produktov tretích strán) vo vašom telefóne s názvom Log Data. Tieto údaje denníka môžu zahŕňať informácie, ako je adresa internetového protokolu („IP“) vášho zariadenia, názov zariadenia, verzia operačného systému, konfigurácia aplikácie pri využívaní mojej služby, čas a dátum vášho používania služby a ďalšie štatistiky. .\n\nCookies\nCookies sú súbory s malým množstvom údajov, ktoré sa bežne používajú ako anonymné jedinečné identifikátory. Tieto sa odosielajú do vášho prehliadača z navštívených webových stránok a ukladajú sa do internej pamäte vášho zariadenia.\nTáto služba tieto „cookies“ výslovne nepoužíva. Aplikácia však môže používať kód tretích strán a knižnice, ktoré používajú „cookies“ na zhromažďovanie informácií a zlepšovanie svojich služieb. Máte možnosť tieto súbory cookie prijať alebo odmietnuť a vedieť, kedy sa súbor cookie odosiela do vášho zariadenia. Ak sa rozhodnete odmietnuť naše súbory cookie, možno nebudete môcť používať niektoré časti tejto služby.\n\nPoskytovatelia služieb\nMôžem zamestnávať spoločnosti a jednotlivcov tretích strán z nasledujúcich dôvodov:\nNa uľahčenie našej Služby;\nposkytovať Službu v našom mene;\nVykonávať služby súvisiace so službou;\nAby nám pomohli analyzovať, ako sa naša služba používa.\nChcem informovať používateľov tejto služby, že tieto tretie strany majú prístup k vašim osobným údajom. Dôvodom je plnenie im zverených úloh v našom mene. Sú však povinní nezverejniť ani použiť informácie na žiadny iný účel.\n\nBezpečnosť\nVážim si vašu dôveru pri poskytovaní vašich osobných údajov, preto sa snažíme používať komerčne prijateľné prostriedky na ich ochranu. Pamätajte však, že žiadny spôsob prenosu cez internet alebo spôsob elektronického ukladania nie je 100% bezpečný a spoľahlivý a nemôžem zaručiť jeho absolútnu bezpečnosť.\n\nOdkazy na iné stránky\nTáto služba môže obsahovať odkazy na iné stránky. Ak kliknete na odkaz tretej strany, budete presmerovaní na danú stránku. Upozorňujeme, že tieto externé stránky neprevádzkujem ja. Preto vám dôrazne odporúčam, aby ste si prečítali Zásady ochrany osobných údajov týchto webových stránok. Nemám žiadnu kontrolu a nepreberám žiadnu zodpovednosť za obsah, zásady ochrany osobných údajov alebo postupy akýchkoľvek stránok alebo služieb tretích strán.\n\nSúkromie detí\nTieto služby nie sú určené pre nikoho mladšieho ako 13 rokov. Vedome nezhromažďujem osobné údaje od detí mladších ako 13 rokov. V prípade, že zistím, že dieťa mladšie ako 13 rokov mi poskytlo osobné údaje, okamžite tieto z našich serverov vymažem. Ak ste rodič alebo opatrovník a viete, že vaše dieťa nám poskytlo osobné údaje, kontaktujte ma, aby som mohol urobiť potrebné kroky.\n\nZmeny týchto zásad ochrany osobných údajov\nZ času na čas môžem aktualizovať naše Zásady ochrany osobných údajov. Preto vám odporúčame pravidelne kontrolovať túto stránku, či neobsahuje nejaké zmeny. O akýchkoľvek zmenách vás budem informovať zverejnením nových Zásad ochrany osobných údajov na tejto stránke.\n\nTieto zásady sú účinné od 16.05.2022\n\nKontaktuj nás\nAk máte akékoľvek otázky alebo návrhy týkajúce sa mojich zásad ochrany osobných údajov, neváhajte ma kontaktovať na adrese smado@vsa.su.";
+
+/* No comment provided by engineer. */
+"Settings" = "Nastavenie";
+
+/* No comment provided by engineer. */
+"Terms & Conditions" = "Zmluvné podmienky";
+
+/* No comment provided by engineer. */
+"Terms & Privacy Policy" = "Podmienky a zásady ochrany osobných údajov";
+
+/* No comment provided by engineer. */
+"These files are too big (over 4 MB): \n\n%@\nPlease reduce the file size, convert to image format, or choose other files." = "Tieto súbory sú príliš veľké (viac ako 4 MB):\n\n%@\nZmenšite veľkosť súboru, preveďte ho na formát obrázka alebo vyberte iné súbory.";
+
+/* No comment provided by engineer. */
+"Title" = "Názov";
+
+/* No comment provided by engineer. */
+"To send an email please configure email into settings iOS" = "Ak chcete odoslať e-mail, nakonfigurujte e-mail v nastaveniach iOS";
+
+/* (No Comment) */
+"Today" = "dnes";
+
+/* No comment provided by engineer. */
+"Warning!" = "POZOR!";
+
+/* No comment provided by engineer. */
+"You have not given permission to send notifications from this app. Please turn on notifications for this app in ios settings." = "Neudelili ste povolenie na odosielanie upozornení z tejto aplikácie. Zapnite upozornenia pre túto aplikáciu v nastaveniach systému iOS.";
 
