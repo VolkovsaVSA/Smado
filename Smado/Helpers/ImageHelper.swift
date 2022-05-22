@@ -8,8 +8,7 @@
 import SwiftUI
 import UniformTypeIdentifiers
 
-class ImageHelper {
-    private init() {}
+enum ImageHelper {
 
     private static func compressImage(source: CGImageSource) -> Data? {
         let downsampleOptions = [
@@ -37,31 +36,6 @@ class ImageHelper {
         print("compressed data: \(data as Data)")
         return data as Data
     }
-    
-    static func compressImageWithURL(url: URL) -> Data? {
-        let sourceOptions = [kCGImageSourceShouldCache: true] as CFDictionary
-        guard let source = CGImageSourceCreateWithURL(url as CFURL, sourceOptions) else {
-            return nil
-        }
-        
-        return compressImage(source: source)
-    }
-    static func compressImageWithData(data: Data) -> Data? {
-        let sourceOptions = [kCGImageSourceShouldCache: false] as CFDictionary
-        guard let source = CGImageSourceCreateWithData(data as CFData, sourceOptions) else {return nil}
-        
-        return compressImage(source: source)
-    }
-    static func drawPDFfromURL(url: URL) -> UIImage? {
-        guard let document = CGPDFDocument(url as CFURL) else { return nil }
-        return drawPDF(document: document)
-    }
-    
-    static func drawPDFfromData(data: CFData) -> UIImage? {
-        guard let dataProvider = CGDataProvider(data: data) else { return nil }
-        guard let document = CGPDFDocument(dataProvider) else { return nil }
-        return drawPDF(document: document)
-    }
     private static func drawPDF(document: CGPDFDocument) -> UIImage? {
         guard let page = document.page(at: 1) else { return nil }
         
@@ -77,6 +51,32 @@ class ImageHelper {
 
         return img
     }
+    
+    static func compressImageWithURL(url: URL) -> Data? {
+        let sourceOptions = [kCGImageSourceShouldCache: true] as CFDictionary
+        guard let source = CGImageSourceCreateWithURL(url as CFURL, sourceOptions) else {
+            return nil
+        }
+        
+        return compressImage(source: source)
+    }
+    static func compressImageWithData(data: Data) -> Data? {
+        let sourceOptions = [kCGImageSourceShouldCache: false] as CFDictionary
+        guard let source = CGImageSourceCreateWithData(data as CFData, sourceOptions) else {return nil}
+        
+        return compressImage(source: source)
+    }
+    
+    static func drawPDFfromURL(url: URL) -> UIImage? {
+        guard let document = CGPDFDocument(url as CFURL) else { return nil }
+        return drawPDF(document: document)
+    }
+    static func drawPDFfromData(data: CFData) -> UIImage? {
+        guard let dataProvider = CGDataProvider(data: data) else { return nil }
+        guard let document = CGPDFDocument(dataProvider) else { return nil }
+        return drawPDF(document: document)
+    }
+    
     
     static func compressData(_ data: Data) -> Data? {
         return try? (data as NSData).compressed(using: .lzma) as Data

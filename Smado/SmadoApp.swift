@@ -15,6 +15,7 @@ struct SmadoApp: App {
     var body: some Scene {
         WindowGroup {
             HomeView()
+                .modifier(ChooseColorSchemeViewModifire())
                 .environment(\.managedObjectContext, cd.container.viewContext)
                 .environmentObject(storeManager)
                 .onReceive(NotificationCenter.default.publisher(for: .NSPersistentStoreRemoteChange), perform: { _ in

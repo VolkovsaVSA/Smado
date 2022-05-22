@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Icon: View {
+    @Environment(\.colorScheme) private var colorScheme
     
     let icon: String
     let size: CGFloat
@@ -27,7 +28,7 @@ struct Icon: View {
             .background(
                 Color(UIColor.tertiarySystemBackground)
                     .cornerRadius(12)
-                    .shadow(color: .black.opacity(0.2), radius: 6, x: 0, y: 3)
+                    .shadow(color: Color.shadowColor, radius: 6, x: 0, y: 3)
             )
     }
 }

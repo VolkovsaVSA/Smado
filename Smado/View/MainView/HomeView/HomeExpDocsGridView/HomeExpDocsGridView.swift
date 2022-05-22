@@ -27,8 +27,7 @@ struct HomeExpDocsGridView: View {
                         NavigationLink {
                             ExpiredDocsGridView(docs: CDStack.shared.filterdocs(documents: documents, expiresStatus: item.status), expiredStatus: item.status)
                         } label: {
-//                            HomeExpDocsGridCell(item: item, documents: documents, width: width)
-                            
+
                             VStack(alignment: .leading, spacing: 4) {
                                 HStack {
                                     IconImageView(image: item.image, color: item.color, imageScale: 16)
@@ -72,6 +71,8 @@ extension HomeExpDocsGridView {
     
     private var width: CGFloat {
         
+        print(UIScreen.main.bounds.width)
+        
         switch UIScreen.main.bounds.width {
                 //4' ipodtouch, se1
             case 320: return 136
@@ -99,7 +100,8 @@ extension HomeExpDocsGridView {
                 
                 //ipad base
             case 810: return 180
-                
+                //
+            case 812: return 160
                 //ipad air
             case 820: return 180
                 

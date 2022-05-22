@@ -60,7 +60,7 @@ struct DocumentsGridCellView: View {
                 Color(UIColor.tertiarySystemBackground)
                     .blur(radius: 6, opaque: true)
                     .cornerRadius(padding)
-                    .shadow(color: .black.opacity(0.2), radius: 6, x: 0, y: 3)
+                    .shadow(color: Color.shadowColor, radius: 6, x: 0, y: 3)
             )
         }
         .buttonStyle(.plain)

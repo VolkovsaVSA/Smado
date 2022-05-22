@@ -19,19 +19,44 @@ struct PurchaseView: View {
             GradientLine()
             
             VStack {
-                
-                Text("Purchasing subscription you get backuping your data.")
-                    .fontWeight(.thin)
-                    .multilineTextAlignment(.center)
-                
+
                 if let products = storeManager.products {
                     if products.isEmpty {
                         Text("Error")
                     } else {
-                        ForEach(products) { product in
-                            PurchaseCell(product: product)
+                        
+                        GroupBox {
+                            Text("\"Basic access\" gives you a backup of your data to the cloud. But you will have limitations: no more than 100 files (images) in the storage, the maximum size of a .pdf file is 1 MB, the maximum simultaneous selection of 5 files in the explorer and photo library.")
+                                .font(.system(size: 12, weight: .thin, design: .default))
+                            
+                            if let baseProduct = storeManager.products?.first {
+                                ForEach(products.dropLast(2)) { product in
+                                    PurchaseCell(product: product, baseProduct: baseProduct)
+                                }
+                            }
+                            
+                        } label: {
+                            Text("Basic access")
                         }
-                        Spacer()
+                        .groupBoxStyle(BasicAccessStyle())
+                        .padding(.bottom)
+
+                        GroupBox {
+                            Text("\"Unlimited access\" gives you a \"Basic access\" plus unlimited files (images) in the storage, maximum size of a .pdf file is 50 MB and ulimited simultaneous selection files in the explorer and photo library.")
+                                .font(.system(size: 12, weight: .thin, design: .default))
+                            
+                            if let baseProduct = storeManager.products?.dropLast().last {
+                                ForEach(products.dropFirst(3)) { product in
+                                    PurchaseCell(product: product, baseProduct: baseProduct)
+                                }
+                            }
+                            
+                        } label: {
+                            Text("Unlimited access")
+                        }
+                        .groupBoxStyle(UnlimitedAccessStyle())
+//                        .padding(6)
+
                     }
                 } else {
                     Text("Error")

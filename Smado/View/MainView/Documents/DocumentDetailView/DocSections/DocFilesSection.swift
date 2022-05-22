@@ -12,11 +12,9 @@ struct DocFilesSection: View {
     @Environment(\.managedObjectContext) private var viewContext
     @State private var refreshfilesID = UUID()
     @State private var tempUrl: URL? = nil
-    private var height: CGFloat { UIScreen.main.bounds.width / 0.75 }
+    private var height: CGFloat { UIScreen.main.bounds.width / 0.8 }
     
     @Binding var document: DocumentCD?
-//    @Binding var refreshfilesID: UUID
-    
     
     var body: some View {
         
@@ -28,7 +26,7 @@ struct DocFilesSection: View {
                     
                     ForEach(images) { image in
                         VStack {
-                            Text(image.fileName ?? "no file name")
+                            Text(image.fileName?.lastComponent(maxCharacters: 40) ?? "no file name")
                                 .font(.system(size: 12, weight: .thin, design: .default))
                             
                             if image.fileExtention?.lowercased() == "pdf" {
@@ -49,27 +47,31 @@ struct DocFilesSection: View {
                         .onTapGesture { tapToFile(image: image) }
                         .swipeActions(edge: .trailing, allowsFullSwipe: true) {
                             Button(role: .destructive) {
-                                withAnimation {
-                                    viewContext.delete(image)
-                                    refreshfilesID = UUID()
+                                viewContext.delete(image)
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                                    withAnimation {
+                                        refreshfilesID = UUID()
+                                    }
                                 }
                             } label: {
                                 Label("", systemImage: "trash")
                             }
                         }
+                        
                     }//ForEach
                     .id(refreshfilesID)
+                    
 
                     MockSpaceInList(height: 50)
-                        
+        
                 }//section
-//                .edgesIgnoringSafeArea(.bottom)
+                 
                 .listRowSeparator(.hidden)
                 .quickLookPreview($tempUrl)
-                
             }
             
         }
+            
         
     }
 }

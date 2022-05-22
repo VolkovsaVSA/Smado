@@ -19,25 +19,27 @@ struct PurchaseButton: View {
                 try await storeManager.purchase(product)
             }
         } label: {
-            VStack(alignment: .center, spacing: 4) {
+            VStack(alignment: .center, spacing: 2) {
+                Text(product.displayName)
+                    .font(.system(size: 14, weight: .thin, design: .default))
                 Text("\(product.displayPrice) / \(IAPProducts(rawValue: product.id) != nil ? IAPProducts(rawValue: product.id)!.localizedPeriod() : "n/a")")
-                    .fontWeight(.medium)
+                    .font(.system(size: 14, weight: .medium, design: .default))
                 
                 if storeManager.transactions.contains(where: { $0.productID == product.id }),
                    let trans = storeManager.transactions.filter({$0.productID == product.id}).last,
                    let expirationDate = trans.expirationDate
                 {
                     Text("You have this subscription until \(expirationDate.formatted(date: .numeric, time: .omitted))")
-                        .font(.system(size: 12, weight: .thin, design: .default))
+                        .font(.system(size: 10, weight: .thin, design: .default))
                 }
                 
             }
-            .frame(width: 250, height: 40, alignment: .center)
+            .frame(width: 250, height: 44, alignment: .center)
         }
         .buttonStyle(.borderedProminent)
         .foregroundColor(.primary)
         .tint(Color(UIColor.tertiarySystemBackground))
-        .shadow(color: .black.opacity(0.2), radius: 6, x: 0, y: 3)
+        .shadow(color: storeManager.transactions.contains(where: { $0.productID == product.id }) ? .clear :  Color.shadowColor, radius: 6, x: 0, y: 3)
         .disabled(storeManager.transactions.contains(where: { $0.productID == product.id }))
     }
 }

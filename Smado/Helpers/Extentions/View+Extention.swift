@@ -9,7 +9,9 @@ import SwiftUI
 
 extension View {
     
-    func documentPicker(isPresented: Binding<Bool>, files: Binding<[FileModel]>, callBack: @escaping ([(String, Int)])->Void) -> some View {
+    
+    
+    func documentPicker(isPresented: Binding<Bool>, files: Binding<[FileModel]>, maxPdfFileSizeBytes: Int, callBack: @escaping ([(String, String)])->Void) -> some View {
         self
         .fileImporter(isPresented: isPresented,
                       allowedContentTypes: [.image, .pdf],
@@ -18,7 +20,7 @@ extension View {
             
             print(result)
             
-            var bigFiles = [(String, Int)]()
+            var bigFiles = [(String, String)]()
 
             switch result {
                 case .success(let urls):
@@ -27,9 +29,9 @@ extension View {
                         print(url)
                         if url.pathExtension.lowercased() == "pdf" {
                             guard let data = FileManager.default.contents(atPath: url.path) else { return }
-                            if data.count > 4_000_000 {
+                            if data.count > maxPdfFileSizeBytes {
                                 print("\(url.lastPathComponent): \(data.count)")
-                                bigFiles.append((url.lastPathComponent, data.count/1_000_000))
+                                bigFiles.append((url.lastPathComponent, data.count.formatted(.byteCount(style: .file, allowedUnits: .mb, spellsOutZero: false, includesActualByteCount: false))))
                             } else {
                                 files.wrappedValue.append(FileModel(data: data, fileName: url.lastPathComponent))
                             }
@@ -71,7 +73,7 @@ extension View {
             .background(
                 Color(UIColor.tertiarySystemBackground)
                     .cornerRadius(12)
-                    .shadow(color: .black.opacity(0.2), radius: 6, x: 0, y: 3)
+                    .shadow(color: Color.shadowColor, radius: 6, x: 0, y: 3)
             )
     }
     
@@ -84,10 +86,11 @@ extension View {
             )
             .background(
                 Color(UIColor.tertiarySystemBackground)
-                    .blur(radius: 6, opaque: true)
+//                    .blur(radius: 6, opaque: true)
                     .cornerRadius(12)
+                    .shadow(color: Color.shadowColor, radius: 6, x: 0, y: 3)
             )
-            .shadow(color: .black.opacity(0.2), radius: 6, x: 0, y: 3)
+            
     }
     
     //Views

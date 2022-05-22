@@ -10,12 +10,14 @@ import SwiftUI
 struct DocumentDetailView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.colorScheme) private var colorScheme
     
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \CategoryCD.craetedDate, ascending: true)],
         animation: .default)
     private var categories: FetchedResults<CategoryCD>
     @State private var columns = [GridItem(.adaptive(minimum: UIDevice.isIPad ? UIScreen.main.bounds.width * 0.17 : UIScreen.main.bounds.width * 0.3))]
+    private var height: CGFloat { UIScreen.main.bounds.width / 0.75 }
     
     @State private var showCameraPicker = false
     @State private var showImagePicker = false
@@ -25,7 +27,10 @@ struct DocumentDetailView: View {
     @State private var refreshFilesID = UUID()
     @State private var showDeleteAlert = false
     @State private var showBigFilesAlert = false
-    @State private var bigFiles = ""
+    @State private var bigFiles: String = ""
+    @State private var tempUrl: URL? = nil
+    @State private var tooManySeletedFilesAlert = false
+    @State private var tooManyImagesAlert = false
 
     @State private var category: CategoryCD? = nil
     @State private var document: DocumentCD? = nil
@@ -46,34 +51,34 @@ struct DocumentDetailView: View {
         _category = State(initialValue: document.parentCategory)
         _isNewDocument = State(initialValue: isNewDocument)
     }
-
     
     var body: some View {
         
         NavigationView {
             
-            ZStack {
-
-                List {
-                    DocDataSection(title: $title, dateEnd: $dateEnd, category: $category)
-                        .listRowBackground(Color.primary.colorInvert())
-                    DocNotifSection(notifToday: $notifToday, notifWeek: $notifWeek, notifMonth: $notifMonth)
-                        .listRowBackground(Color.primary.colorInvert())
-                    DocFilesSection(document: $document)
-                        .listRowBackground(Color.primary.colorInvert())
-                }
-                
-                DocSaveButton(title: $title, isNewDocument: isNewDocument) { docSaveAction() }
+            List {
+                DocDataSection(title: $title, dateEnd: $dateEnd, category: $category)
+                DocNotifSection(notifToday: $notifToday, notifWeek: $notifWeek, notifMonth: $notifMonth)
+                DocFilesSection(document: $document)
             }
-            .background(Color.primary.colorInvert().ignoresSafeArea())
-            .font(.system(size: 15, weight: .light, design: .default))
-            .listStyle(.grouped)
+            .overlay(
+                DocSaveButton(title: $title, isNewDocument: isNewDocument) { docSaveAction() }
+            )
+            .listStyle(.plain)
+            .background(colorScheme == .dark ? Color.black.opacity(0.2) : .white)
+            .onAppear {
+              UITableView.appearance().backgroundColor = .clear
+            }
+            .onDisappear {
+              UITableView.appearance().backgroundColor = .systemGroupedBackground
+            }
+            
+            
+            
             .toolbar {
                 toolbarButton()
             }
-//            .navigationBarTitleDisplayMode(.inline)
             .navigationTitle("Edit")
-//            .navigationBar(backgroundColor: Color.yellow, titleColor: Color.primary)
         }
         .interactiveDismissDisabled(true)
         
@@ -81,13 +86,22 @@ struct DocumentDetailView: View {
             CameraPicker(selectedFile: $cameraSelectedFile)
         }
         .sheet(isPresented: $showImagePicker) {
-            ImagePicker(files: $files)
+            ImagePicker(files: $files, selectionLimit: AccessLimits.maxSelectedFiles)
         }
 //        .documentPicker(isPresented: $showDocumentPicker, files: $files) { tempBigFiles in
 //            bigfilesProcessing(tempBigFiles)
 //        }
         .sheet(isPresented: $showDocumentPicker) {
-            DocumentPicker(files: $files, bigFiles: $bigFiles)
+            
+            DocumentPicker(files: $files,
+                           bigFiles: $bigFiles,
+                           maxFileSizeBytes: AccessLimits.maxFileSizeBytes,
+                           maxSelectedFiles: AccessLimits.maxSelectedFiles)
+            { tooManyFiles in
+                if tooManyFiles {
+                    tooManySeletedFilesAlert.toggle()
+                }
+            }
         }
         
         .onChange(of: cameraSelectedFile) {
@@ -96,9 +110,6 @@ struct DocumentDetailView: View {
         .onChange(of: files) {
             onChangeFile($0)
         }
-//        .onChange(of: document?.unwrapImages, perform: { newValue in
-//            refreshFilesID = UUID()
-//        })
         .onChange(of: bigFiles, perform: { newValue in
             showBigFilesAlert.toggle()
         })
@@ -111,15 +122,26 @@ struct DocumentDetailView: View {
         .alert("Warning!", isPresented: $showBigFilesAlert) {
             //default action
         } message: {
-            Text("These files are too big (over 4 MB): \n\n\(bigFiles)\nPlease reduce the file size, convert to image format, or choose other files.")
+            Text("These files are too big (over \(AccessLimits.maxFileSizeBytes.formatted(.byteCount(style: .file, allowedUnits: .mb, spellsOutZero: false, includesActualByteCount: false)))): \n\n\(bigFiles)\nPlease reduce the file size, convert to image format, or choose other files.")
         }
+        .alert("Warning!", isPresented: $tooManySeletedFilesAlert) {
+            
+        } message: {
+            Text("Too many files have been selected. The maximum number of selected files is 5!")
+        }
+        .alert("Warning!", isPresented: $tooManyImagesAlert) {
+            
+        } message: {
+            Text("Too many images saved! Maximum number of files to save: \(AccessLimits.maxSelectedFiles)")
+        }
+
         
     }
 }
 
 
 extension DocumentDetailView {
-    
+        
     fileprivate func docSaveAction() {
         if let document = document {
             document.title = title.trimmingCharacters(in: .whitespaces)
@@ -147,9 +169,14 @@ extension DocumentDetailView {
         
         newValue.forEach { file in
             if let doc = document {
-                _ = CDStack.shared.createImage(document: doc, fileName: file.fileName, data: file.data)
+                if CDStack.shared.fetchImages().count < AccessLimits.maxStoredFiles || AccessLimits.maxStoredFiles == 0 {
+                    _ = CDStack.shared.createImage(document: doc, fileName: file.fileName, data: file.data)
+                } else {
+                    tooManyImagesAlert = true
+                }
             }
         }
+ 
         files = []
     }
     
@@ -157,15 +184,6 @@ extension DocumentDetailView {
         if let newfile = newValue { files.append(newfile) }
     }
     
-    fileprivate func bigfilesProcessing(_ tempBigFiles: [(String, Int)]) {
-        if !tempBigFiles.isEmpty {
-            bigFiles = ""
-            tempBigFiles.forEach { file in
-                bigFiles += file.0 + " (" + file.1.description + NSLocalizedString(" MB)\n", comment: "bigfiles")
-            }
-            showBigFilesAlert.toggle()
-        }
-    }
     
     @ToolbarContentBuilder
     private func toolbarButton() -> some ToolbarContent {
@@ -203,11 +221,6 @@ extension DocumentDetailView {
             }
             .foregroundColor(.red)
         }
-//        ToolbarItem(placement: .principal) {
-//            Text("Document data")
-////                .font(.system(size: 14, weight: .thin, design: .default))
-//        }
-        
     }
     
 }

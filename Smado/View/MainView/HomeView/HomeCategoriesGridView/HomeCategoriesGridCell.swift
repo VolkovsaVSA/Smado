@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeCategoriesGridCell: View {
+    @Environment(\.colorScheme) private var colorScheme
     
     @StateObject var category: CategoryCD
     
@@ -33,7 +34,7 @@ struct HomeCategoriesGridCell: View {
                 .background(
                      NavigationLink(destination: DocumentsGridView(category: category)) {EmptyView()}
                  )
-                .shadow(color: .black.opacity(0.2), radius: 6, x: 0, y: 3)
+                .shadow(color: Color.shadowColor, radius: 6, x: 0, y: 3)
         )
         
     }

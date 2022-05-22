@@ -23,12 +23,18 @@
 		C861C4C827B6E6D4002A588B /* UIDevice+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = C861C4C727B6E6D4002A588B /* UIDevice+Extention.swift */; };
 		C861C4CA27B6ED3A002A588B /* ExpiredStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C861C4C927B6ED3A002A588B /* ExpiredStatus.swift */; };
 		C861C4CC27B6EEF4002A588B /* DocumentsGridModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C861C4CB27B6EEF4002A588B /* DocumentsGridModel.swift */; };
-		C861C4D027B70FAC002A588B /* HomeExpDocsGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C861C4CF27B70FAC002A588B /* HomeExpDocsGridCell.swift */; };
 		C861C4D427B738B8002A588B /* HomeExpDocsGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C861C4D327B738B8002A588B /* HomeExpDocsGridView.swift */; };
 		C861C4D727B74117002A588B /* UIColor+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = C861C4D627B74117002A588B /* UIColor+Extention.swift */; };
 		C875FDEC282182F5003F7E92 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C875FDEB282182F5003F7E92 /* ImageHelper.swift */; };
 		C875FDF02821D916003F7E92 /* PDFKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C875FDEF2821D916003F7E92 /* PDFKitView.swift */; };
 		C875FE0328264E6E003F7E92 /* Date+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = C875FE0228264E6E003F7E92 /* Date+Extention.swift */; };
+		C8763A3B2839F0540048812D /* ColorSchemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8763A3A2839F0540048812D /* ColorSchemeModel.swift */; };
+		C8763A3D2839F0B70048812D /* VisualSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8763A3C2839F0B70048812D /* VisualSection.swift */; };
+		C8763A3F2839F2E00048812D /* ChooseColorSchemeViewModifire.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8763A3E2839F2E00048812D /* ChooseColorSchemeViewModifire.swift */; };
+		C8763A41283A01120048812D /* Color+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8763A40283A01120048812D /* Color+Extention.swift */; };
+		C8763A47283A51ED0048812D /* BasicAccessStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8763A46283A51ED0048812D /* BasicAccessStyle.swift */; };
+		C8763A49283A522F0048812D /* UnlimitedAccessStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8763A48283A522F0048812D /* UnlimitedAccessStyle.swift */; };
+		C8763A4B283A54CB0048812D /* AccessLimits.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8763A4A283A54CB0048812D /* AccessLimits.swift */; };
 		C8845A4E282C373F009D71EC /* HomeCatHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8845A4D282C373F009D71EC /* HomeCatHeader.swift */; };
 		C8845A57282C3C74009D71EC /* CategoryCD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8845A4F282C3C74009D71EC /* CategoryCD+CoreDataClass.swift */; };
 		C8845A58282C3C74009D71EC /* CategoryCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8845A50282C3C74009D71EC /* CategoryCD+CoreDataProperties.swift */; };
@@ -124,12 +130,18 @@
 		C861C4C727B6E6D4002A588B /* UIDevice+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extention.swift"; sourceTree = "<group>"; };
 		C861C4C927B6ED3A002A588B /* ExpiredStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpiredStatus.swift; sourceTree = "<group>"; };
 		C861C4CB27B6EEF4002A588B /* DocumentsGridModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsGridModel.swift; sourceTree = "<group>"; };
-		C861C4CF27B70FAC002A588B /* HomeExpDocsGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeExpDocsGridCell.swift; sourceTree = "<group>"; };
 		C861C4D327B738B8002A588B /* HomeExpDocsGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeExpDocsGridView.swift; sourceTree = "<group>"; };
 		C861C4D627B74117002A588B /* UIColor+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extention.swift"; sourceTree = "<group>"; };
 		C875FDEB282182F5003F7E92 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
 		C875FDEF2821D916003F7E92 /* PDFKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFKitView.swift; sourceTree = "<group>"; };
 		C875FE0228264E6E003F7E92 /* Date+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extention.swift"; sourceTree = "<group>"; };
+		C8763A3A2839F0540048812D /* ColorSchemeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorSchemeModel.swift; sourceTree = "<group>"; };
+		C8763A3C2839F0B70048812D /* VisualSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualSection.swift; sourceTree = "<group>"; };
+		C8763A3E2839F2E00048812D /* ChooseColorSchemeViewModifire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseColorSchemeViewModifire.swift; sourceTree = "<group>"; };
+		C8763A40283A01120048812D /* Color+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extention.swift"; sourceTree = "<group>"; };
+		C8763A46283A51ED0048812D /* BasicAccessStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAccessStyle.swift; sourceTree = "<group>"; };
+		C8763A48283A522F0048812D /* UnlimitedAccessStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlimitedAccessStyle.swift; sourceTree = "<group>"; };
+		C8763A4A283A54CB0048812D /* AccessLimits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessLimits.swift; sourceTree = "<group>"; };
 		C8845A4D282C373F009D71EC /* HomeCatHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCatHeader.swift; sourceTree = "<group>"; };
 		C8845A4F282C3C74009D71EC /* CategoryCD+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryCD+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C8845A50282C3C74009D71EC /* CategoryCD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryCD+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -233,6 +245,7 @@
 		C861C4CD27B6F989002A588B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C8763A3A2839F0540048812D /* ColorSchemeModel.swift */,
 				C861C4C927B6ED3A002A588B /* ExpiredStatus.swift */,
 				C861C4CB27B6EEF4002A588B /* DocumentsGridModel.swift */,
 				C8D0552B27E5E0DE004CCE0F /* FileModel.swift */,
@@ -245,7 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				C8845A65282C482B009D71EC /* MainView */,
-				C8EFEE2F27E6F4C9007885CA /* SupportViews */,
+				C8EFEE2F27E6F4C9007885CA /* HelperViews */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -254,7 +267,6 @@
 			isa = PBXGroup;
 			children = (
 				C861C4D327B738B8002A588B /* HomeExpDocsGridView.swift */,
-				C861C4CF27B70FAC002A588B /* HomeExpDocsGridCell.swift */,
 				C8236E2F27FACD9E00C7D4FD /* ExpiredDocsGridView.swift */,
 			);
 			path = HomeExpDocsGridView;
@@ -265,6 +277,7 @@
 			children = (
 				C861C4C727B6E6D4002A588B /* UIDevice+Extention.swift */,
 				C861C4D627B74117002A588B /* UIColor+Extention.swift */,
+				C8763A40283A01120048812D /* Color+Extention.swift */,
 				C8FFE99227BCD0CE0008F571 /* View+Extention.swift */,
 				C8D0552627DF503B004CCE0F /* String+Extention.swift */,
 				C875FE0228264E6E003F7E92 /* Date+Extention.swift */,
@@ -289,6 +302,43 @@
 				C8845A54282C3C74009D71EC /* FolderCD+CoreDataProperties.swift */,
 			);
 			path = CDStack;
+			sourceTree = "<group>";
+		};
+		C8763A42283A514A0048812D /* PDFView */ = {
+			isa = PBXGroup;
+			children = (
+				C875FDEF2821D916003F7E92 /* PDFKitView.swift */,
+				C8399C2C27F59D8C0024A9FF /* PDFViewForImage.swift */,
+			);
+			path = PDFView;
+			sourceTree = "<group>";
+		};
+		C8763A43283A51680048812D /* ViewModifires */ = {
+			isa = PBXGroup;
+			children = (
+				C8763A3E2839F2E00048812D /* ChooseColorSchemeViewModifire.swift */,
+			);
+			path = ViewModifires;
+			sourceTree = "<group>";
+		};
+		C8763A44283A517D0048812D /* GroupboxStyles */ = {
+			isa = PBXGroup;
+			children = (
+				C8CA1F0B283595C300FA477E /* DocInfSectionStyle.swift */,
+				C8763A46283A51ED0048812D /* BasicAccessStyle.swift */,
+				C8763A48283A522F0048812D /* UnlimitedAccessStyle.swift */,
+			);
+			path = GroupboxStyles;
+			sourceTree = "<group>";
+		};
+		C8763A45283A519E0048812D /* OtherViews */ = {
+			isa = PBXGroup;
+			children = (
+				C8FFE98727B84F8B0008F571 /* IconImageView.swift */,
+				C8CF90EB281197820028372A /* GradientLine.swift */,
+				C8BF8774282ACA420074E736 /* MockSpaceInList.swift */,
+			);
+			path = OtherViews;
 			sourceTree = "<group>";
 		};
 		C8845A65282C482B009D71EC /* MainView */ = {
@@ -362,6 +412,7 @@
 				C832DEAE280CAB9600B895DD /* SettingsView.swift */,
 				C8CF90E6281183F10028372A /* PurchaseSection.swift */,
 				C8CF90DA281018900028372A /* BackupSection.swift */,
+				C8763A3C2839F0B70048812D /* VisualSection.swift */,
 				C896E4DC2817221E00E75E8D /* NotificationSection.swift */,
 				C896E4DE28173C5E00E75E8D /* FeedbackSection.swift */,
 				C8CF90E328117CAA0028372A /* PurchaseView */,
@@ -420,7 +471,7 @@
 				C896E4E728174C4400E75E8D /* AppID.swift */,
 				C832DEAC280CAB6300B895DD /* UDKeys.swift */,
 				C875FDEB282182F5003F7E92 /* ImageHelper.swift */,
-				C8CA1F0B283595C300FA477E /* DocInfSectionStyle.swift */,
+				C8763A4A283A54CB0048812D /* AccessLimits.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -436,17 +487,16 @@
 			path = Pickers;
 			sourceTree = "<group>";
 		};
-		C8EFEE2F27E6F4C9007885CA /* SupportViews */ = {
+		C8EFEE2F27E6F4C9007885CA /* HelperViews */ = {
 			isa = PBXGroup;
 			children = (
-				C875FDEF2821D916003F7E92 /* PDFKitView.swift */,
-				C8399C2C27F59D8C0024A9FF /* PDFViewForImage.swift */,
-				C8FFE98727B84F8B0008F571 /* IconImageView.swift */,
-				C8CF90EB281197820028372A /* GradientLine.swift */,
-				C8BF8774282ACA420074E736 /* MockSpaceInList.swift */,
 				C8D0552A27E5DAA3004CCE0F /* Pickers */,
+				C8763A42283A514A0048812D /* PDFView */,
+				C8763A44283A517D0048812D /* GroupboxStyles */,
+				C8763A43283A51680048812D /* ViewModifires */,
+				C8763A45283A519E0048812D /* OtherViews */,
 			);
-			path = SupportViews;
+			path = HelperViews;
 			sourceTree = "<group>";
 		};
 		C8EFEE3927F03AE0007885CA /* DocumentDetailView */ = {
@@ -597,15 +647,18 @@
 				C8CF90D9281018450028372A /* SettingsToggleCell.swift in Sources */,
 				C8CF90DD28101A1B0028372A /* PurchaseView.swift in Sources */,
 				C8AD61D827AD6FFA002DA72D /* CDStack.swift in Sources */,
+				C8763A4B283A54CB0048812D /* AccessLimits.swift in Sources */,
 				C8CF90DF28117A360028372A /* PurchaseButton.swift in Sources */,
 				C8AD61D127AD6FF7002DA72D /* HomeView.swift in Sources */,
 				C8845A60282C3CDA009D71EC /* CategoryCD+CoreDataOwnProperties.swift in Sources */,
+				C8763A3F2839F2E00048812D /* ChooseColorSchemeViewModifire.swift in Sources */,
 				C875FDF02821D916003F7E92 /* PDFKitView.swift in Sources */,
 				C8AD61DB27AD6FFA002DA72D /* Smado.xcdatamodeld in Sources */,
 				C8845A62282C3DFB009D71EC /* DocumentCD+CoreDataOwnProperties.swift in Sources */,
 				C8845A5E282C3C74009D71EC /* DocumentCD+CoreDataProperties.swift in Sources */,
 				C80D198E281BF5EC005C51CB /* SettingsButton.swift in Sources */,
 				C896E4DD2817221E00E75E8D /* NotificationSection.swift in Sources */,
+				C8763A49283A522F0048812D /* UnlimitedAccessStyle.swift in Sources */,
 				C8CF90E128117AD30028372A /* PurchaseCell.swift in Sources */,
 				C8236E342805579B00C7D4FD /* EmptyThumbnail.swift in Sources */,
 				C8FFE99327BCD0CE0008F571 /* View+Extention.swift in Sources */,
@@ -616,7 +669,6 @@
 				C8CA1F0C283595C300FA477E /* DocInfSectionStyle.swift in Sources */,
 				C8CF90F228119E1B0028372A /* DocSaveButton.swift in Sources */,
 				C8AD61CF27AD6FF7002DA72D /* SmadoApp.swift in Sources */,
-				C861C4D027B70FAC002A588B /* HomeExpDocsGridCell.swift in Sources */,
 				C8CF90DB281018900028372A /* BackupSection.swift in Sources */,
 				C8EFEE2C27E6E7E6007885CA /* CameraPicker.swift in Sources */,
 				C8CF90E7281183F10028372A /* PurchaseSection.swift in Sources */,
@@ -636,6 +688,7 @@
 				C8EFEE2E27E6EE96007885CA /* Queue.swift in Sources */,
 				C8236E392805603300C7D4FD /* NotificationManager.swift in Sources */,
 				C8CF90D6280FE53C0028372A /* StoreManager.swift in Sources */,
+				C8763A3D2839F0B70048812D /* VisualSection.swift in Sources */,
 				C8EFEE3627EF79FF007885CA /* DocumentDetailView.swift in Sources */,
 				C82E0D5A2830C062007531E1 /* Bundle+Extention.swift in Sources */,
 				C8236E362805592000C7D4FD /* DocThumbnail.swift in Sources */,
@@ -644,8 +697,10 @@
 				C875FE0328264E6E003F7E92 /* Date+Extention.swift in Sources */,
 				C861C4D427B738B8002A588B /* HomeExpDocsGridView.swift in Sources */,
 				C8CF90EE28119B840028372A /* DocNotifSection.swift in Sources */,
+				C8763A3B2839F0540048812D /* ColorSchemeModel.swift in Sources */,
 				C8D0552727DF503B004CCE0F /* String+Extention.swift in Sources */,
 				C861C4D727B74117002A588B /* UIColor+Extention.swift in Sources */,
+				C8763A41283A01120048812D /* Color+Extention.swift in Sources */,
 				C8236E2E27FAC5B600C7D4FD /* DocumentsPlusButton.swift in Sources */,
 				C8CF90EC281197820028372A /* GradientLine.swift in Sources */,
 				C896E4DF28173C5F00E75E8D /* FeedbackSection.swift in Sources */,
@@ -657,6 +712,7 @@
 				C8CF90EA281189B60028372A /* DocDataSection.swift in Sources */,
 				C8FFE98627B84D8E0008F571 /* AddCategoryView.swift in Sources */,
 				C8845A57282C3C74009D71EC /* CategoryCD+CoreDataClass.swift in Sources */,
+				C8763A47283A51ED0048812D /* BasicAccessStyle.swift in Sources */,
 				C8236E2C27FAB01100C7D4FD /* DocumentsGridCellView.swift in Sources */,
 				C875FDEC282182F5003F7E92 /* ImageHelper.swift in Sources */,
 				C8845A5B282C3C74009D71EC /* FolderCD+CoreDataClass.swift in Sources */,
@@ -849,7 +905,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Smado/Smado.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"Smado/Preview Content\"";
 				DEVELOPMENT_TEAM = 7C46924T49;
 				ENABLE_PREVIEWS = YES;
@@ -861,8 +917,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -884,7 +940,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Smado/Smado.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"Smado/Preview Content\"";
 				DEVELOPMENT_TEAM = 7C46924T49;
 				ENABLE_PREVIEWS = YES;
@@ -896,8 +952,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

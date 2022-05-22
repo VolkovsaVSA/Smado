@@ -26,7 +26,7 @@ struct FeedbackSection: View {
         ) {
             
             VStack {
-                FeedbackButton(buttonText: NSLocalizedString("Send email to the developer", comment: " "),
+                FeedbackButton(buttonText: NSLocalizedString("Write to the developer", comment: " "),
                                systemImage: "envelope",
                                disableButton: !MFMailComposeViewController.canSendMail(),
                                backgroundColor: .blue) {

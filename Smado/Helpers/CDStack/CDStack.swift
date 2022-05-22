@@ -202,6 +202,16 @@ class CDStack {
         }
     }
     
+    func fetchImages() -> [ImageCD] {
+        var images = [ImageCD]()
+        do {
+            images = try container.viewContext.fetch(ImageCD.fetchRequest())
+        } catch {
+            print("fetch error \(error.localizedDescription)")
+        }
+        return images
+    }
+    
 }
 
 

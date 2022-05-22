@@ -15,18 +15,24 @@ struct DocNotifSection: View {
     
     var body: some View {
         Section(header: Text("Notification")) {
-            HStack {
-                Text("Days before deadline")
-                    .lineLimit(2)
-                    .multilineTextAlignment(.leading)
-                Spacer()
-                Toggle("01", isOn: $notifToday)
-//                    .tint(.red)
-                Toggle("07", isOn: $notifWeek)
-//                    .tint(.yellow)
-                Toggle("30", isOn: $notifMonth)
+            
+            GroupBox {
+                HStack {
+                    Text("Days before deadline")
+                        .lineLimit(2)
+                        .multilineTextAlignment(.leading)
+                        .minimumScaleFactor(0.75)
+                    Spacer()
+                    Toggle("01", isOn: $notifToday)
+    //                    .tint(.red)
+                    Toggle("07", isOn: $notifWeek)
+    //                    .tint(.yellow)
+                    Toggle("30", isOn: $notifMonth)
+                }
+                .toggleStyle(.button)
             }
-            .toggleStyle(.button)
+            .groupBoxStyle(DocInfSectionStyle())
+            
 //            .newDocSectionStyle()
             
         }

@@ -24,6 +24,8 @@ struct PDFKitView: UIViewRepresentable {
 //        print(pageBounds)
 //        pdfView.usePageViewController(true, withViewOptions: nil)
         pdfView.autoScales = true
+        pdfView.backgroundColor = .clear
+        
         if singlePage {
             pdfView.displayMode = .singlePage
         }

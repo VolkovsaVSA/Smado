@@ -9,8 +9,6 @@ import Foundation
 
 extension String {
     func lastComponent(maxCharacters: Int) -> String {
-        self.count > maxCharacters ?
-        String(self.dropLast(self.count - maxCharacters)) + "..."
-        : self
+        self.count > maxCharacters ? String(self.dropLast(self.count - maxCharacters)) + "..." + (self.components(separatedBy: ".").last ?? "") : self
     }
 }

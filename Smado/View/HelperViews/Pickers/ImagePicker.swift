@@ -13,11 +13,12 @@ import UniformTypeIdentifiers
 struct ImagePicker: UIViewControllerRepresentable {
 
     @Binding var files: [FileModel]
-
+    let selectionLimit: Int
+     
     func makeUIViewController(context: Context) -> PHPickerViewController {
         var config = PHPickerConfiguration()
         config.filter = .images
-        config.selectionLimit = 0
+        config.selectionLimit = selectionLimit
         let picker = PHPickerViewController(configuration: config)
         picker.delegate = context.coordinator
         return picker

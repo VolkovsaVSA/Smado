@@ -57,13 +57,23 @@ final class StoreManager: ObservableObject {
     @MainActor private func checkVerified<T>(_ result: VerificationResult<T>) throws -> T {
         switch result {
             case .unverified:
+                UserDefaults.standard.set(false, forKey: UDKeys.fwu)
+                UserDefaults.standard.set(false, forKey: UDKeys.fw)
                 throw PurchaseError.failed
             case .verified(let safe):
-                transactions = []
+//                transactions = []
                 if let trans = safe as? Transaction {
+                    if trans.productID == IAPProducts.Smado01MonthUnlimited.rawValue ||
+                        trans.productID == IAPProducts.Smado12MonthUnlimited.rawValue {
+                        UserDefaults.standard.set(true, forKey: UDKeys.fwu)
+                        UserDefaults.standard.set(true, forKey: UDKeys.fw)
+                    } else {
+                        UserDefaults.standard.set(true, forKey: UDKeys.fw)
+                        UserDefaults.standard.set(false, forKey: UDKeys.fwu)
+                    }
                     transactions.insert(trans)
                 }
-                UserDefaults.standard.set(true, forKey: UDKeys.fw)
+//
 //                print("---------------------------")
 //                print(transactions.description)
 //                print("===========================")
@@ -125,9 +135,10 @@ extension StoreManager {
         let monthPrice = product.price / Decimal(subscriptionPeriod)
         return monthPrice.formatted(.currency(code: Locale.current.currencyCode ?? "USD"))
     }
-    func calcSave(product: Product) -> String {
+    func calcSave(product: Product, baseProduct: Product) -> String {
         guard let subscription = product.subscription else {return ""}
-        guard let monthPrice = products?.first?.price else {return ""}
+//        guard let monthPrice = products?.first?.price else {return ""}
+        let monthPrice = baseProduct.price
         var subscriptionPeriod: Int = 0
         
         switch subscription.subscriptionPeriod.unit {
@@ -152,7 +163,11 @@ extension StoreManager {
 
 
 enum IAPProducts: String, CaseIterable {
-    case SmadoBackup1Month, SmadoBackup6Month, SmadoBackup12Month
+    case SmadoBackup1Month
+    case SmadoBackup6Month
+    case SmadoBackup12Month
+    case Smado01MonthUnlimited
+    case Smado12MonthUnlimited
     
     func localizedPeriod() -> String {
         switch self {
@@ -161,6 +176,10 @@ enum IAPProducts: String, CaseIterable {
             case .SmadoBackup6Month:
                 return NSLocalizedString("6 months", comment: "localizedPeriod")
             case .SmadoBackup12Month:
+                return NSLocalizedString("12 months", comment: "localizedPeriod")
+            case .Smado01MonthUnlimited:
+                return NSLocalizedString("month", comment: "localizedPeriod")
+            case .Smado12MonthUnlimited:
                 return NSLocalizedString("12 months", comment: "localizedPeriod")
         }
     }

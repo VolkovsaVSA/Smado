@@ -23,6 +23,11 @@ struct BackupSection: View {
                                        systemImage: iCloudSync ? "checkmark.icloud.fill" : "icloud.slash",
                                        isOn: $iCloudSync.animation(),
                                        backgroundColor: iCloudSync ? .blue : .red)
+                    .onChange(of: iCloudSync) { newValue in
+                        if newValue {
+                            alertShow.toggle()
+                        }
+                    }
                     if FileManager.default.ubiquityIdentityToken == nil {
                         Text("For backups please login into your account in ios settings")
                             .multilineTextAlignment(.leading)
@@ -48,6 +53,12 @@ struct BackupSection: View {
             }
             
         }
+        .alert("Attention!", isPresented: $alertShow) {
+            
+        } message: {
+            Text("If you need to download data from the backup immediately, please restart the application.")
+        }
+
 
     }
 }

@@ -10,6 +10,7 @@ import SwiftUI
 struct AddCategoryView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.colorScheme) private var colorScheme
     
     private var category: CategoryCD?
     @State private var title: String
@@ -38,7 +39,7 @@ struct AddCategoryView: View {
                     Icon(icon: selectedIcon, size: size)
                     TextField("Title", text: $title)
                         .textFieldStyle(.roundedBorder)
-                        .shadow(color: .black.opacity(0.2), radius: 6, x: 0, y: 3)
+                        .shadow(color: Color.shadowColor, radius: 6, x: 0, y: 3)
                 }
                 .padding()
                 GradientLine()

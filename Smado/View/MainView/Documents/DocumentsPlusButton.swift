@@ -26,7 +26,7 @@ struct DocumentsPlusButton: View {
                         .padding(10)
                         .background(
                             Circle()
-                                .shadow(color: .black.opacity(0.3), radius: 6, x: 2, y: 2)
+                                .shadow(color: Color.shadowColor, radius: 6, x: 2, y: 2)
                         )
                         .overlay(
                             Circle().stroke(Color.white, lineWidth: 2)

@@ -7,12 +7,13 @@
 
 import Foundation
 
-struct UDKeys {
-    private init() {}
+enum UDKeys {
     
     static let fw = "fullVersion"
+    static let fwu = "fullVersionUnlimited"
     static let iCloudSync = "iCloudSync"
     static let sendNotifications = "sendNotifications"
     static let allNotificationTime = "timeNotification_Date"
     static let notFirstRun = "notFirstRun"
+    static let colorScheme = "colorScheme"
 }

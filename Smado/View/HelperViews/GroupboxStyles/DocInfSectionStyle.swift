@@ -18,7 +18,7 @@ struct DocInfSectionStyle: GroupBoxStyle {
         .background(
             Color(UIColor.tertiarySystemBackground)
                 .cornerRadius(12)
-                .shadow(color: .black.opacity(0.2), radius: 6, x: 0, y: 3)
+                .shadow(color: Color.shadowColor, radius: 6, x: 0, y: 3)
         )
     }
 }
