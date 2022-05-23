@@ -1,5 +1,8 @@
-/* bigfiles */
-" MB)\n" = " MB)\n";
+/* No comment provided by engineer. */
+"\"Basic access\" gives you a backup of your data to the cloud. But you will have limitations: no more than 100 files (images) in the storage, the maximum size of a .pdf file is 1 MB, the maximum simultaneous selection of 5 files in the explorer and photo library." = "“基本访问”可让您将数据备份到云端。 但是您会有限制：存储中的文件（图像）不超过 100 个，.pdf 文件的最大大小为 1 MB，资源管理器和照片库中最多同时选择 5 个文件。";
+
+/* No comment provided by engineer. */
+"\"Unlimited access\" gives you a \"Basic access\" plus unlimited files (images) in the storage, maximum size of a .pdf file is 50 MB and ulimited simultaneous selection files in the explorer and photo library." = "“无限制访问”为您提供“基本访问”以及存储中的无限文件（图像），.pdf 文件的最大大小为 50 MB，资源管理器和照片库中的同时选择文件无限制。";
 
 /* No comment provided by engineer. */
 "%@ at %@/month. Save %@" = "%@ 在 %@/月。 节省 %@";
@@ -20,6 +23,9 @@
 "Backup" = "备份";
 
 /* No comment provided by engineer. */
+"Basic access" = "基本访问";
+
+/* No comment provided by engineer. */
 "By downloading or using the app, these terms will automatically apply to you – you should make sure therefore that you read them carefully before using the app. You’re not allowed to copy, or modify the app, any part of the app, or our trademarks in any way. You’re not allowed to attempt to extract the source code of the app, and you also shouldn’t try to translate the app into other languages, or make derivative versions. The app itself, and all the trade marks, copyright, database rights and other intellectual property rights related to it, still belong to Sergei Volkov.\n\nSergei Volkov is committed to ensuring that the app is as useful and efficient as possible. For that reason, we reserve the right to make changes to the app or to charge for its services, at any time and for any reason. We will never charge you for the app or its services without making it very clear to you exactly what you’re paying for.\n\nThe Smado app stores and processes personal data that you have provided to us, in order to provide my Service. It’s your responsibility to keep your phone and access to the app secure. We therefore recommend that you do not jailbreak or root your phone, which is the process of removing software restrictions and limitations imposed by the official operating system of your device. It could make your phone vulnerable to malware/viruses/malicious programs, compromise your phone’s security features and it could mean that the Smado app won’t work properly or at all.\n\nYou should be aware that there are certain things that Sergei Volkov will not take responsibility for. Certain functions of the app will require the app to have an active internet connection. The connection can be Wi-Fi, or provided by your mobile network provider, but Sergei Volkov cannot take responsibility for the app not working at full functionality if you don’t have access to Wi-Fi, and you don’t have any of your data allowance left.\n\nIf you’re using the app outside of an area with Wi-Fi, you should remember that your terms of the agreement with your mobile network provider will still apply. As a result, you may be charged by your mobile provider for the cost of data for the duration of the connection while accessing the app, or other third party charges. In using the app, you’re accepting responsibility for any such charges, including roaming data charges if you use the app outside of your home territory (i.e. region or country) without turning off data roaming. If you are not the bill payer for the device on which you’re using the app, please be aware that we assume that you have received permission from the bill payer for using the app.\n\nAlong the same lines, Sergei Volkov cannot always take responsibility for the way you use the app i.e. You need to make sure that your device stays charged – if it runs out of battery and you can’t turn it on to avail the Service, Sergei Volkov cannot accept responsibility.\n\nWith respect to Sergei Volkov’s responsibility for your use of the app, when you’re using the app, it’s important to bear in mind that although we endeavour to ensure that it is updated and correct at all times, we do rely on third parties to provide information to us so that we can make it available to you. Sergei Volkov accepts no liability for any loss, direct or indirect, you experience as a result of relying wholly on this functionality of the app.\n\nAt some point, we may wish to update the app. The app is currently available on iOS – the requirements for system(and for any additional systems we decide to extend the availability of the app to) may change, and you’ll need to download the updates if you want to keep using the app. Sergei Volkov does not promise that it will always update the app so that it is relevant to you and/or works with the iOS version that you have installed on your device. However, you promise to always accept updates to the application when offered to you, We may also wish to stop providing the app, and may terminate use of it at any time without giving notice of termination to you. Unless we tell you otherwise, upon any termination, (a) the rights and licenses granted to you in these terms will end; (b) you must stop using the app, and (if needed) delete it from your device.\n\nChanges to This Terms and Conditions\nI may update our Terms and Conditions from time to time. Thus, you are advised to review this page periodically for any changes. I will notify you of any changes by posting the new Terms and Conditions on this page.\n\nThese terms and conditions are effective as of 2022-05-16\n\nContact Us\nIf you have any questions or suggestions about my Terms and Conditions, do not hesitate to contact me at smado@vsa.su.\n\n" = "通过下载或使用该应用程序，这些条款将自动适用于您——因此，您应确保在使用该应用程序之前仔细阅读它们。您不得以任何方式复制或修改应用程序、应用程序的任何部分或我们的商标。您不得尝试提取应用程序的源代码，也不应尝试将应用程序翻译成其他语言或制作衍生版本。该应用程序本身，以及与之相关的所有商标、版权、数据库权利和其他知识产权，仍属于谢尔盖沃尔科夫。\n\nSergei Volkov 致力于确保该应用程序尽可能有用和高效。因此，我们保留随时以任何理由对应用程序进行更改或对其服务收费的权利。我们绝不会向您收取应用程序或其服务的费用，除非您非常清楚您所支付的费用。\n\nSmado 应用程序存储和处理您提供给我们的个人数据，以便提供我的服务。您有责任保护您的手机和应用程序访问的安全。因此，我们建议您不要越狱或 root 手机，这是消除设备官方操作系统施加的软件限制和限制的过程。它可能使您的手机容易受到恶意软件/病毒/恶意程序的攻击，损害您手机的安全功能，这可能意味着 Smado 应用程序将无法正常运行或根本无法运行。\n\n您应该知道，Sergei Volkov 不会对某些事情负责。该应用程序的某些功能将要求该应用程序具有有效的互联网连接。连接可以是 Wi-Fi，也可以由您的移动网络提供商提供，但如果您无法访问 Wi-Fi，并且您没有任何你的数据限额还剩。\n\n如果您在有 Wi-Fi 的区域之外使用该应用程序，您应该记住，您与移动网络提供商的协议条款仍然适用。因此，您的移动提供商可能会在访问应用程序时向您收取连接期间的数据费用或其他第三方费用。在使用该应用程序时，您将承担任何此类费用，包括如果您在本国领土（即地区或国家）之外使用该应用程序而未关闭数据漫游的漫游数据费用。如果您不是使用该应用程序的设备的账单支付者，请注意，我们假定您已获得账单支付者的使用该应用程序的许可。\n\n同样，谢尔盖沃尔科夫不能总是对您使用该应用程序的方式负责，即您需要确保您的设备保持充电状态——如果电池电量耗尽并且您无法打开它以使用该服务，谢尔盖沃尔科夫不能承担责任。\n\n关于 Sergei Volkov 对您使用该应用程序的责任，当您使用该应用程序时，请务必记住，尽管我们努力确保它始终保持更新和正确，但我们确实依赖第三方向我们提供信息，以便我们将其提供给您。谢尔盖沃尔科夫对您因完全依赖应用程序的此功能而遭受的任何直接或间接损失不承担任何责任。\n\n在某些时候，我们可能希望更新应用程序。该应用程序目前在 iOS 上可用 - 系统要求（以及我们决定将应用程序的可用性扩展到的任何其他系统）可能会发生变化，如果您想继续使用该应用程序，则需要下载更新。 Sergei Volkov 不承诺它会始终更新应用程序以使其与您相关和/或与您设备上安装的 iOS 版本一起使用。但是，您承诺在向您提供应用程序时始终接受更新，我们也可能希望停止提供该应用程序，并可随时终止使用该应用程序，而无需向您发出终止通知。除非我们另行通知您，否则在任何终止时，(a) 在这些条款中授予您的权利和许可将终止； (b) 您必须停止使用该应用程序，并（如果需要）将其从您的设备中删除。\n\n本条款和条件的更改\n我可能会不时更新我们的条款和条件。因此，建议您定期查看此页面以了解任何更改。我将通过在此页面上发布新的条款和条件来通知您任何更改。\n\n这些条款和条件自 2022-05-16 起生效\n\n联系我们\n如果您对我的条款和条件有任何疑问或建议，请随时通过 smado@vsa.su 与我联系。";
 
 /* No comment provided by engineer. */
@@ -36,6 +42,9 @@
 
 /* No comment provided by engineer. */
 "Create" = "创造";
+
+/* ColorScheme */
+"Dark" = "黑暗的";
 
 /* No comment provided by engineer. */
 "Data backup available by subscription only" = "仅通过订阅提供数据备份";
@@ -88,11 +97,17 @@
 /* No comment provided by engineer. */
 "If you have problems with payment, then write to smado@vsa.su" = "如果您在付款方面遇到问题，请写信至 smado@vsa.su";
 
+/* No comment provided by engineer. */
+"If you need to download data from the backup immediately, please restart the application." = "如果您需要立即从备份中下载数据，请重新启动应用程序。";
+
 /* (No Comment) */
 "less 7 days" = "少于 7 天";
 
 /* (No Comment) */
 "less 30 days" = "少于 30 天";
+
+/* ColorScheme */
+"Light" = "光";
 
 /* localizedPeriod */
 "month" = "月";
@@ -115,9 +130,6 @@
 /* No comment provided by engineer. */
 "Purchases" = "购买";
 
-/* No comment provided by engineer. */
-"Purchasing subscription you get backuping your data." = "购买订阅即可备份您的数据。";
-
 /* (No Comment) */
 "Rate the app" = "给应用评分";
 
@@ -127,14 +139,14 @@
 /* No comment provided by engineer. */
 "Save" = "节省";
 
-/* (No Comment) */
-"Send email to the developer" = "向开发者发送电子邮件";
-
 /* No comment provided by engineer. */
 "Sergei Volkov built the Smado app as a Free app. This SERVICE is provided by Sergei Volkov at no cost and is intended for use as is.\n\nThis page is used to inform visitors regarding my policies with the collection, use, and disclosure of Personal Information if anyone decided to use my Service.\n\nIf you choose to use my Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that I collect is used for providing and improving the Service. I will not use or share your information with anyone except as described in this Privacy Policy.\n\nThe terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible at Smado unless otherwise defined in this Privacy Policy.\n\nInformation Collection and Use\nFor a better experience, while using our Service, I may require you to provide us with certain personally identifiable information. The information that I request will be retained on your device and is not collected by me in any way.\n\nLog Data\nI want to inform you that whenever you use my Service, in a case of an error in the app I collect data and information (through third party products) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol (“IP”) address, device name, operating system version, the configuration of the app when utilizing my Service, the time and date of your use of the Service, and other statistics.\n\nCookies\nCookies are files with a small amount of data that are commonly used as anonymous unique identifiers. These are sent to your browser from the websites that you visit and are stored on your device's internal memory.\nThis Service does not use these “cookies” explicitly. However, the app may use third party code and libraries that use “cookies” to collect information and improve their services. You have the option to either accept or refuse these cookies and know when a cookie is being sent to your device. If you choose to refuse our cookies, you may not be able to use some portions of this Service.\n\nService Providers\nI may employ third-party companies and individuals due to the following reasons:\nTo facilitate our Service;\nTo provide the Service on our behalf;\nTo perform Service-related services;\nTo assist us in analyzing how our Service is used.\nI want to inform users of this Service that these third parties have access to your Personal Information. The reason is to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or use the information for any other purpose.\n\nSecurity\nI value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and I cannot guarantee its absolute security.\n\nLinks to Other Sites\nThis Service may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by me. Therefore, I strongly advise you to review the Privacy Policy of these websites. I have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.\n\nChildren’s Privacy\nThese Services do not address anyone under the age of 13. I do not knowingly collect personally identifiable information from children under 13. In the case I discover that a child under 13 has provided me with personal information, I immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact me so that I will be able to do necessary actions.\n\nChanges to This Privacy Policy\nI may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. I will notify you of any changes by posting the new Privacy Policy on this page.\n\nThis policy is effective as of 2022-05-16\n\nContact Us\nIf you have any questions or suggestions about my Privacy Policy, do not hesitate to contact me at smado@vsa.su." = "Sergei Volkov 将 Smado 应用程序构建为免费应用程序。本服务由 Sergei Volkov 免费提供，并按原样使用。\n\n如果有人决定使用我的服务，则此页面用于通知访问者有关我收集、使用和披露个人信息的政策。\n\n如果您选择使用我的服务，则您同意收集和使用与本政策相关的信息。我收集的个人信息用于提供和改进服务。除本隐私政策中所述外，我不会使用或与任何人共享您的信息。\n\n本隐私政策中使用的术语与我们的条款和条件具有相同的含义，除非本隐私政策中另有定义，否则可在 Smado 访问这些条款和条件。\n\n信息收集和使用\n为了获得更好的体验，在使用我们的服务时，我可能会要求您向我们提供某些个人身份信息。我要求的信息将保留在您的设备上，我不会以任何方式收集。\n\n记录数据\n我想通知您，每当您使用我的服务时，如果应用程序出现错误，我会（通过第三方产品）在您的手机上收集名为 Log Data 的数据和信息。此日志数据可能包括您的设备 Internet 协议（“IP”）地址、设备名称、操作系统版本、使用我的服务时应用程序的配置、您使用服务的时间和日期以及其他统计信息等信息.\n\n饼干\nCookie 是包含少量数据的文件，通常用作匿名唯一标识符。这些信息从您访问的网站发送到您的浏览器，并存储在您设备的内存中。\n本服务不明确使用这些“cookies”。但是，该应用程序可能会使用使用“cookies”的第三方代码和库来收集信息并改进其服务。您可以选择接受或拒绝这些 cookie，并知道何时将 cookie 发送到您的设备。如果您选择拒绝我们的 cookie，您可能无法使用本服务的某些部分。\n\n服务供应商\n由于以下原因，我可能会雇用第三方公司和个人：\n促进我们的服务；\n代表我们提供服务；\n执行与服务相关的服务；\n协助我们分析我们的服务是如何使用的。\n我想通知本服务的用户，这些第三方可以访问您的个人信息。原因是代表我们执行分配给他们的任务。但是，他们有义务不为任何其他目的披露或使用这些信息。\n\n安全\n我重视您对向我们提供您的个人信息的信任，因此我们正在努力使用商业上可接受的方式来保护它。但请记住，没有任何一种互联网传输方法或电子存储方法是 100% 安全可靠的，我无法保证其绝对安全。\n\n链接到其他网站\n本服务可能包含指向其他网站的链接。如果您单击第三方链接，您将被定向到该站点。请注意，这些外部网站并非由我运营。因此，我强烈建议您查看这些网站的隐私政策。我无法控制任何第三方网站或服务的内容、隐私政策或做法，也不承担任何责任。\n\n儿童隐私\n这些服务不针对 13 岁以下的任何人。我不会故意收集 13 岁以下儿童的个人身份信息。如果我发现 13 岁以下的儿童向我提供了个人信息，我会立即从我们的服务器中将其删除。如果您是父母或监护人，并且您知道您的孩子向我们提供了个人信息，请与我联系，以便我能够采取必要的行动。\n\n本隐私政策的变更\n我可能会不时更新我们的隐私政策。因此，建议您定期查看此页面以了解任何更改。我将通过在此页面上发布新的隐私政策来通知您任何更改。\n\n本政策自2022-05-16起生效\n\n联系我们\n如果您对我的隐私政策有任何问题或建议，请随时通过 smado@vsa.su 与我联系。";
 
 /* No comment provided by engineer. */
 "Settings" = "设置";
+
+/* ColorScheme */
+"System" = "系统";
 
 /* No comment provided by engineer. */
 "Terms & Conditions" = "条款和条件";
@@ -143,7 +155,10 @@
 "Terms & Privacy Policy" = "条款和隐私政策";
 
 /* No comment provided by engineer. */
-"These files are too big (over 4 MB): \n\n%@\nPlease reduce the file size, convert to image format, or choose other files." = "这些文件太大（超过 4 MB）：\n\n%@\n请减小文件大小，转换为图像格式，或选择其他文件。";
+"Theme" = "主题";
+
+/* No comment provided by engineer. */
+"These files are too big (over %@): \n\n%@\nPlease reduce the file size, convert to image format, or choose other files." = "这些文件太大（超过 %@）：\n\n%@\n\n请减小文件大小，转换为图像格式，或选择其他文件。";
 
 /* No comment provided by engineer. */
 "Title" = "标题";
@@ -155,8 +170,23 @@
 "Today" = "今天";
 
 /* No comment provided by engineer. */
+"Too many files have been selected. The maximum number of selected files is %lld" = "选择的文件太多。 所选文件的最大数量为 %lld";
+
+/* No comment provided by engineer. */
+"Too many images saved! Maximum number of files to save: %lld" = "保存的图片太多！ 要保存的最大文件数：%lld";
+
+/* No comment provided by engineer. */
+"Unlimited access" = "无限制访问";
+
+/* No comment provided by engineer. */
 "Warning!" = "警告！";
+
+/* (No Comment) */
+"Write to the developer" = "写给开发商";
 
 /* No comment provided by engineer. */
 "You have not given permission to send notifications from this app. Please turn on notifications for this app in ios settings." = "您未授予从该应用发送通知的权限。 请在 ios 设置中开启此应用的通知。";
+
+/* No comment provided by engineer. */
+"You have this subscription until %@" = "您在 %@ 之前拥有此订阅";
 

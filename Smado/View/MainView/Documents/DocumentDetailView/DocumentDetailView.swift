@@ -127,12 +127,12 @@ struct DocumentDetailView: View {
         .alert("Warning!", isPresented: $tooManySeletedFilesAlert) {
             
         } message: {
-            Text("Too many files have been selected. The maximum number of selected files is 5!")
+            Text("Too many files have been selected. The maximum number of selected files is \(AccessLimits.maxSelectedFiles)")
         }
         .alert("Warning!", isPresented: $tooManyImagesAlert) {
             
         } message: {
-            Text("Too many images saved! Maximum number of files to save: \(AccessLimits.maxSelectedFiles)")
+            Text("Too many images saved! Maximum number of files to save: \(AccessLimits.maxStoredFiles)")
         }
 
         
