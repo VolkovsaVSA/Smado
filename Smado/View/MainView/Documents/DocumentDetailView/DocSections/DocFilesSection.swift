@@ -13,8 +13,10 @@ struct DocFilesSection: View {
     @State private var refreshfilesID = UUID()
     @State private var tempUrl: URL? = nil
     private var height: CGFloat { UIScreen.main.bounds.width / 0.8 }
+    @State private var previewControllerShow = false
     
     @Binding var document: DocumentCD?
+
     
     var body: some View {
         
@@ -68,10 +70,18 @@ struct DocFilesSection: View {
                  
                 .listRowSeparator(.hidden)
                 .quickLookPreview($tempUrl)
+//                .sheet(isPresented: $previewControllerShow) {
+//
+//                } content: {
+//                    PreviewController(url: $tempUrl)
+////                        .id(refreshfilesID)
+//                }
+
             }
             
         }
             
+
         
     }
 }
@@ -84,6 +94,7 @@ extension DocFilesSection {
            let fileName = image.fileName
         {
             tempUrl = LocalFilesHelper.writeTempFile(data: data, fileName: fileName)
+            previewControllerShow.toggle()
         }
     }
     

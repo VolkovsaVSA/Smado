@@ -71,7 +71,7 @@ extension HomeExpDocsGridView {
     
     private var width: CGFloat {
         
-        print(UIScreen.main.bounds.width)
+//        print(UIScreen.main.bounds.width)
         
         switch UIScreen.main.bounds.width {
                 //4' ipodtouch, se1

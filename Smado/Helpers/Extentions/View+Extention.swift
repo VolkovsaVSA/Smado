@@ -9,8 +9,6 @@ import SwiftUI
 
 extension View {
     
-    
-    
     func documentPicker(isPresented: Binding<Bool>, files: Binding<[FileModel]>, maxPdfFileSizeBytes: Int, callBack: @escaping ([(String, String)])->Void) -> some View {
         self
         .fileImporter(isPresented: isPresented,

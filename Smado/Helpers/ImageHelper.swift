@@ -79,10 +79,10 @@ enum ImageHelper {
     
     
     static func compressData(_ data: Data) -> Data? {
-        return try? (data as NSData).compressed(using: .lzma) as Data
+        return try? (data as NSData).compressed(using: .zlib) as Data
     }
     static func decompressData(_ data: Data) -> Data? {
-        return try? (data as NSData).decompressed(using: .lzma) as Data
+        return try? (data as NSData).decompressed(using: .zlib) as Data
     }
 }
 

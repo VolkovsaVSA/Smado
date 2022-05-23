@@ -29,8 +29,10 @@ struct DocDataSection: View {
                     .font(.system(size: 16, weight: .bold, design: .default))
                     .submitLabel(.done)
                 DatePicker("Deadline", selection: $dateEnd, in: Date()..., displayedComponents: [.date])
+//                    .font(.system(size: 15, weight: .thin, design: .default))
                 HStack {
                     Text("Category")
+//                        .font(.system(size: 15, weight: .thin, design: .default))
                     Spacer()
                     Picker("", selection: $category) {
                         ForEach(categories) { cat in
@@ -41,7 +43,8 @@ struct DocDataSection: View {
                 }
             }
             .groupBoxStyle(DocInfSectionStyle())
-//            .newDocSectionStyle()
+//            .font(.system(size: 15, weight: .thin, design: .default))
+            
         }
         .listRowSeparator(.hidden)
     }

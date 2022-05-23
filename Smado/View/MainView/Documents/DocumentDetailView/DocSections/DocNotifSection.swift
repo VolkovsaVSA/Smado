@@ -22,6 +22,7 @@ struct DocNotifSection: View {
                         .lineLimit(2)
                         .multilineTextAlignment(.leading)
                         .minimumScaleFactor(0.75)
+//                        .font(.system(size: 15, weight: .thin, design: .default))
                     Spacer()
                     Toggle("01", isOn: $notifToday)
     //                    .tint(.red)
@@ -32,9 +33,7 @@ struct DocNotifSection: View {
                 .toggleStyle(.button)
             }
             .groupBoxStyle(DocInfSectionStyle())
-            
-//            .newDocSectionStyle()
-            
+    
         }
         .listRowSeparator(.hidden)
     }
