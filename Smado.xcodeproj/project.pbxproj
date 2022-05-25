@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C80D198E281BF5EC005C51CB /* SettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80D198D281BF5EC005C51CB /* SettingsButton.swift */; };
+		C81AA01D283CB07700A9D0A0 /* CellShadowModifire.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81AA01C283CB07700A9D0A0 /* CellShadowModifire.swift */; };
 		C8236E2C27FAB01100C7D4FD /* DocumentsGridCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8236E2B27FAB01100C7D4FD /* DocumentsGridCellView.swift */; };
 		C8236E2E27FAC5B600C7D4FD /* DocumentsPlusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8236E2D27FAC5B600C7D4FD /* DocumentsPlusButton.swift */; };
 		C8236E3027FACD9E00C7D4FD /* ExpiredDocsGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8236E2F27FACD9E00C7D4FD /* ExpiredDocsGridView.swift */; };
@@ -106,6 +107,7 @@
 		C81AA019283B4EBA00A9D0A0 /* kk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = kk; path = kk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C81AA01A283B4EC700A9D0A0 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		C81AA01B283B4EC700A9D0A0 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		C81AA01C283CB07700A9D0A0 /* CellShadowModifire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellShadowModifire.swift; sourceTree = "<group>"; };
 		C8228CBF2830FF7B00C72623 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C8228CC02830FF7B00C72623 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C8236E2B27FAB01100C7D4FD /* DocumentsGridCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsGridCellView.swift; sourceTree = "<group>"; };
@@ -319,6 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				C8763A3E2839F2E00048812D /* ChooseColorSchemeViewModifire.swift */,
+				C81AA01C283CB07700A9D0A0 /* CellShadowModifire.swift */,
 			);
 			path = ViewModifires;
 			sourceTree = "<group>";
@@ -671,6 +674,7 @@
 				C8BF8775282ACA420074E736 /* MockSpaceInList.swift in Sources */,
 				C896E4E828174C4400E75E8D /* AppID.swift in Sources */,
 				C8CA1F0C283595C300FA477E /* DocInfSectionStyle.swift in Sources */,
+				C81AA01D283CB07700A9D0A0 /* CellShadowModifire.swift in Sources */,
 				C8CF90F228119E1B0028372A /* DocSaveButton.swift in Sources */,
 				C8AD61CF27AD6FF7002DA72D /* SmadoApp.swift in Sources */,
 				C8CF90DB281018900028372A /* BackupSection.swift in Sources */,
@@ -836,7 +840,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -892,7 +896,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -909,7 +913,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Smado/Smado.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_ASSET_PATHS = "\"Smado/Preview Content\"";
 				DEVELOPMENT_TEAM = 7C46924T49;
 				ENABLE_PREVIEWS = YES;
@@ -921,9 +925,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -944,7 +948,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Smado/Smado.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_ASSET_PATHS = "\"Smado/Preview Content\"";
 				DEVELOPMENT_TEAM = 7C46924T49;
 				ENABLE_PREVIEWS = YES;
@@ -956,9 +960,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -39,7 +39,7 @@ struct AddCategoryView: View {
                     Icon(icon: selectedIcon, size: size)
                     TextField("Title", text: $title)
                         .textFieldStyle(.roundedBorder)
-                        .shadow(color: Color.shadowColor, radius: 6, x: 0, y: 3)
+                        .modifier(CellShadowModifire())
                 }
                 .padding()
                 GradientLine()

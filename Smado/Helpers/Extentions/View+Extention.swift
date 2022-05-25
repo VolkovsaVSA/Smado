@@ -71,7 +71,7 @@ extension View {
             .background(
                 Color(UIColor.tertiarySystemBackground)
                     .cornerRadius(12)
-                    .shadow(color: Color.shadowColor, radius: 6, x: 0, y: 3)
+                    .modifier(CellShadowModifire())
             )
     }
     
@@ -86,7 +86,7 @@ extension View {
                 Color(UIColor.tertiarySystemBackground)
 //                    .blur(radius: 6, opaque: true)
                     .cornerRadius(12)
-                    .shadow(color: Color.shadowColor, radius: 6, x: 0, y: 3)
+                    .modifier(CellShadowModifire())
             )
             
     }

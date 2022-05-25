@@ -55,11 +55,13 @@ struct DocumentDetailView: View {
     var body: some View {
         
         NavigationView {
-            
             List {
                 DocDataSection(title: $title, dateEnd: $dateEnd, category: $category)
+                    .listRowBackground(Color.clear)
                 DocNotifSection(notifToday: $notifToday, notifWeek: $notifWeek, notifMonth: $notifMonth)
+                    .listRowBackground(Color.clear)
                 DocFilesSection(document: $document)
+                    .listRowBackground(Color.clear)
             }
             .overlay(
                 DocSaveButton(title: $title, isNewDocument: isNewDocument) { docSaveAction() }

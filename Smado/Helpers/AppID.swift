@@ -13,4 +13,5 @@ enum AppId {
     static let feedbackEmail = "smado@vsa.su"
     static let developerUrl = URL(string: "https://apps.apple.com/developer/sergei-volkov/id1385708952")
     static let displayName = Bundle.main.infoDictionary?.filter({ $0.key == "CFBundleDisplayName" }).first?.value as? String
+    static let standartEula = URL(string: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/")
 }

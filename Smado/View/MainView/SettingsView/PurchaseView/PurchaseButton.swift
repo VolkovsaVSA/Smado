@@ -10,6 +10,7 @@ import StoreKit
 
 struct PurchaseButton: View {
     @EnvironmentObject private var storeManager: StoreManager
+    @Environment(\.colorScheme) var colorScheme
     
     let product: Product
     
@@ -39,7 +40,7 @@ struct PurchaseButton: View {
         .buttonStyle(.borderedProminent)
         .foregroundColor(.primary)
         .tint(Color(UIColor.tertiarySystemBackground))
-        .shadow(color: storeManager.transactions.contains(where: { $0.productID == product.id }) ? .clear :  Color.shadowColor, radius: 6, x: 0, y: 3)
+        .shadow(color: storeManager.transactions.contains(where: { $0.productID == product.id }) ? .clear : colorScheme == .dark ? .clear : .black.opacity(0.2), radius: 6, x: 0, y: 3)
         .disabled(storeManager.transactions.contains(where: { $0.productID == product.id }))
     }
 }

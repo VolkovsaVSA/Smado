@@ -34,7 +34,7 @@ struct HomeCategoriesGridCell: View {
                 .background(
                      NavigationLink(destination: DocumentsGridView(category: category)) {EmptyView()}
                  )
-                .shadow(color: Color.shadowColor, radius: 6, x: 0, y: 3)
+                .modifier(CellShadowModifire())
         )
         
     }

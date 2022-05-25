@@ -8,8 +8,8 @@
 import Foundation
 import SwiftUI
 
-extension Color {
-    static var shadowColor: Color {
-        UIScreen.main.traitCollection.userInterfaceStyle == .dark ? .clear : .black.opacity(0.2)
-    }
-}
+//extension Color {
+//    static var shadowColor: Color {
+//        UIScreen.main.traitCollection.userInterfaceStyle == .dark ? .clear : .black.opacity(0.2)
+//    }
+//}
