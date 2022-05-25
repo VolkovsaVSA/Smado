@@ -35,6 +35,7 @@ struct HomeExpDocsGridView: View {
                                     Text(CDStack.shared.filterdocs(documents: documents, expiresStatus: item.status).count.description)
                                         .font(.system(size: 24))
                                         .fontWeight(.bold)
+                                        
                                 }
                                 
                                 Text(ExpiredStatus.localize(status: item.status))
@@ -55,6 +56,9 @@ struct HomeExpDocsGridView: View {
             if newOrientation != .unknown {
                 rotateRefreshedID = UUID()
             }
+        }
+        .onAppear() {
+            UIApplication.shared.applicationIconBadgeNumber = CDStack.shared.filterdocs(documents: documents, expiresStatus: .expired).count
         }
     }
     
