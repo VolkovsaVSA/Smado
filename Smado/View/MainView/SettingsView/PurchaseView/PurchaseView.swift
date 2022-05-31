@@ -72,11 +72,15 @@ struct PurchaseView: View {
                 
                 Text("Recurring billing. Cancel any time. If you choose to purchase a subscription, payment will be charged to your iTunes account and your account will be charged for renewal 24 hours prior to the end of the current period unless auto-renew is turned off. Auto-renewal is managed by the user and may be turned off at any time by going to your settings in the iTunes Store after purchase. Any unused portion of a free trial period will be forfeited when the user purchases a subscription.")
                     .font(.system(size: 12, weight: .thin, design: .default))
-                Button("Terms of Use") {
-                    ConnectionManager.openUrl(openurl: AppId.standartEula)
-//                    showTerms = true
+                Group {
+                    Button("Terms of Use") {
+                        ConnectionManager.openUrl(openurl: AppId.standartEula)
+                    }
+                    Button("Privacy policy") {
+                        ConnectionManager.openUrl(openurl: AppId.privacyPolicy)
+                    }
                 }
-                    .frame(maxHeight: 30)
+                    .frame(maxHeight: 24)
                     .fixedSize(horizontal: false, vertical: true)
                     .font(.system(size: 16))
                     .lineLimit(nil)
