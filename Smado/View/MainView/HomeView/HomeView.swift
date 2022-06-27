@@ -16,6 +16,7 @@ struct HomeView: View {
         animation: .default)
     private var categories: FetchedResults<CategoryCD>
     
+    @AppStorage(UDKeys.fixedImageCameraBug) private var fixedCameraBug = false
 
     @State private var columns = [GridItem(.adaptive(minimum: UIDevice.isIPad ? UIScreen.main.bounds.width * 0.17 : UIScreen.main.bounds.width * 0.3))]
 
@@ -25,7 +26,6 @@ struct HomeView: View {
 
 //    @State var searchText = ""
 
-    
     var body: some View {
         
         NavigationView {
@@ -46,7 +46,10 @@ struct HomeView: View {
                 SettingsButton { showSettings.toggle() }
 
             }
-            .onAppear() { initNotifications() }
+            .onAppear() {
+                initNotifications()
+            }
+            
             .navigationBarHidden(true)
             .edgesIgnoringSafeArea(.bottom)
             

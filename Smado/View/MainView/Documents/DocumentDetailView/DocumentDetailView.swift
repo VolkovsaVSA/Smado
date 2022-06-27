@@ -171,10 +171,12 @@ extension DocumentDetailView {
         
         newValue.forEach { file in
             if let doc = document {
-                if CDStack.shared.fetchImages().count < AccessLimits.maxStoredFiles || AccessLimits.maxStoredFiles == 0 {
-                    _ = CDStack.shared.createImage(document: doc, fileName: file.fileName, data: file.data)
-                } else {
-                    tooManyImagesAlert = true
+                CDStack.shared.fetchImages { images in
+                    if images.count < AccessLimits.maxStoredFiles || AccessLimits.maxStoredFiles == 0 {
+                        _ = CDStack.shared.createImage(document: doc, fileName: file.fileName, data: file.data)
+                    } else {
+                        tooManyImagesAlert = true
+                    }
                 }
             }
         }

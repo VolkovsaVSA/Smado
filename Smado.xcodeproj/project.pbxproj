@@ -64,6 +64,8 @@
 		C8B99D3F282F9ED500C7999E /* DocumentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B99D3E282F9ED500C7999E /* DocumentPicker.swift */; };
 		C8BF8775282ACA420074E736 /* MockSpaceInList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BF8774282ACA420074E736 /* MockSpaceInList.swift */; };
 		C8BF8777282AFDA00074E736 /* TermsConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BF8776282AFDA00074E736 /* TermsConditions.swift */; };
+		C8C2379F286A3C910039FD32 /* Developer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C2379E286A3C910039FD32 /* Developer.swift */; };
+		C8C237A1286A3DEA0039FD32 /* DebugSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C237A0286A3DEA0039FD32 /* DebugSection.swift */; };
 		C8CA1F0C283595C300FA477E /* DocInfSectionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CA1F0B283595C300FA477E /* DocInfSectionStyle.swift */; };
 		C8CF90D6280FE53C0028372A /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CF90D5280FE53C0028372A /* StoreManager.swift */; };
 		C8CF90D9281018450028372A /* SettingsToggleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CF90D8281018450028372A /* SettingsToggleCell.swift */; };
@@ -188,6 +190,8 @@
 		C8BAEB80283118DB00176FAB /* hr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hr; path = hr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C8BF8774282ACA420074E736 /* MockSpaceInList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSpaceInList.swift; sourceTree = "<group>"; };
 		C8BF8776282AFDA00074E736 /* TermsConditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsConditions.swift; sourceTree = "<group>"; };
+		C8C2379E286A3C910039FD32 /* Developer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Developer.swift; sourceTree = "<group>"; };
+		C8C237A0286A3DEA0039FD32 /* DebugSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugSection.swift; sourceTree = "<group>"; };
 		C8CA1F0B283595C300FA477E /* DocInfSectionStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocInfSectionStyle.swift; sourceTree = "<group>"; };
 		C8CF90D5280FE53C0028372A /* StoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 		C8CF90D7281007810028372A /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
@@ -421,6 +425,8 @@
 				C8763A3C2839F0B70048812D /* VisualSection.swift */,
 				C896E4DC2817221E00E75E8D /* NotificationSection.swift */,
 				C896E4DE28173C5E00E75E8D /* FeedbackSection.swift */,
+				C8C237A0286A3DEA0039FD32 /* DebugSection.swift */,
+				C8C2379E286A3C910039FD32 /* Developer.swift */,
 				C8CF90E328117CAA0028372A /* PurchaseView */,
 				C8CF90E8281184170028372A /* SettingsHelperViews */,
 			);
@@ -682,6 +688,7 @@
 				C8CF90E7281183F10028372A /* PurchaseSection.swift in Sources */,
 				C896E4E528174A2700E75E8D /* MailView.swift in Sources */,
 				C8B99D3F282F9ED500C7999E /* DocumentPicker.swift in Sources */,
+				C8C2379F286A3C910039FD32 /* Developer.swift in Sources */,
 				C832DEAF280CAB9700B895DD /* SettingsView.swift in Sources */,
 				C8FFE98C27B859550008F571 /* ColorView.swift in Sources */,
 				C8FFE99127B89F030008F571 /* DocumentsGridView.swift in Sources */,
@@ -731,6 +738,7 @@
 				C8D0552C27E5E0DE004CCE0F /* FileModel.swift in Sources */,
 				C861C4CC27B6EEF4002A588B /* DocumentsGridModel.swift in Sources */,
 				C8845A5A282C3C74009D71EC /* ImageCD+CoreDataProperties.swift in Sources */,
+				C8C237A1286A3DEA0039FD32 /* DebugSection.swift in Sources */,
 				C8845A64282C40BE009D71EC /* ThumbnailImage.swift in Sources */,
 				C861C4C827B6E6D4002A588B /* UIDevice+Extention.swift in Sources */,
 			);
@@ -913,13 +921,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Smado/Smado.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_ASSET_PATHS = "\"Smado/Preview Content\"";
 				DEVELOPMENT_TEAM = 7C46924T49;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Smado/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Smado;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Access to the camera is required to add photos to documents in the application";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -932,7 +939,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = VSA.Smado;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -948,13 +955,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Smado/Smado.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_ASSET_PATHS = "\"Smado/Preview Content\"";
 				DEVELOPMENT_TEAM = 7C46924T49;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Smado/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Smado;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Access to the camera is required to add photos to documents in the application";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -967,7 +973,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = VSA.Smado;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

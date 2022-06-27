@@ -16,4 +16,5 @@ enum UDKeys {
     static let allNotificationTime = "timeNotification_Date"
     static let notFirstRun = "notFirstRun"
     static let colorScheme = "colorScheme"
+    static let fixedImageCameraBug = "fixedImageCameraBug"
 }

@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import PDFKit
 
 struct DocumentImage: View {
     
@@ -30,7 +29,6 @@ struct DocumentImage: View {
                 .resizable()
                 .scaledToFit()
                 .foregroundColor(Color("imageFrameColor"))
-            
         }
     }
 }

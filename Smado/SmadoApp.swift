@@ -21,6 +21,9 @@ struct SmadoApp: App {
                 .onReceive(NotificationCenter.default.publisher(for: .NSPersistentStoreRemoteChange), perform: { _ in
                     print("cloudkit udated")
                 })
+                .onAppear() {
+                    CDStack.shared.fixedCameraImageBug(fileExtention: "jpg", context: cd.container.viewContext)
+                }
         }
     }
 }

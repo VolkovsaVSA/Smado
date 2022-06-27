@@ -92,6 +92,8 @@ struct ImagePicker: UIViewControllerRepresentable {
             if let extention = lastPathComponent.components(separatedBy: ".").last {
                 newFileName += "." + extention
             }
+        } else {
+            newFileName = UUID().uuidString + ".jpg"
         }
         
         return newFileName

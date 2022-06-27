@@ -44,6 +44,7 @@ class CDStack {
         }
 
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            
             if let error = error as NSError? {
                 print("CDError: \(error.localizedDescription)")
             }
@@ -202,14 +203,41 @@ class CDStack {
         }
     }
     
-    func fetchImages() -> [ImageCD] {
+    func fetchImages(callBack: @escaping ([ImageCD])->Void) {
         var images = [ImageCD]()
         do {
             images = try container.viewContext.fetch(ImageCD.fetchRequest())
+            callBack(images)
         } catch {
             print("fetch error \(error.localizedDescription)")
         }
-        return images
+        
+    }
+    
+    func fixedCameraImageBug(fileExtention: String, context: NSManagedObjectContext) {
+        
+        if !UserDefaults.standard.bool(forKey: UDKeys.fixedImageCameraBug) {
+            
+            DispatchQueue.main.async {
+                CDStack.shared.fetchImages { [weak self] images in
+                    guard let self = self else {return}
+                    
+                    for image in images {
+                        if let fileName = image.fileName {
+                            if fileName.components(separatedBy: ".").count < 2 {
+                                image.fileName = fileName + "." + fileExtention
+                                image.fileExtention = fileExtention
+                            }
+                        }
+                    }
+                    
+                    self.saveContext(context: context)
+                    UserDefaults.standard.set(true, forKey: UDKeys.fixedImageCameraBug)
+                }
+            }
+            
+        }
+        
     }
     
 }

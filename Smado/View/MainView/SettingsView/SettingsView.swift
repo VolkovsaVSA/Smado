@@ -28,14 +28,11 @@ struct SettingsView: View {
                     VisualSection()
                     NotificationSection()
                     FeedbackSection()
+//                    DebugSection()
                 }
                 .font(.system(size: 17, weight: .light, design: .default))
             }
-//            .background(colorScheme == .dark ? .black : Color(uiColor: UIColor.systemGroupedBackground))
-//            .onAppear {
-//              UITableView.appearance().backgroundColor = .clear
-//            }
-            
+
             .navigationTitle("Settings")
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {

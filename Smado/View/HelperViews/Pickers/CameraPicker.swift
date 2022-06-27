@@ -45,6 +45,7 @@ struct CameraPicker: UIViewControllerRepresentable {
                 .replacingOccurrences(of: "/", with: "_")
                 .replacingOccurrences(of: ":", with: "_")
                 .replacingOccurrences(of: " ", with: "_")
+                .appending(".jpg")
             
             UIGraphicsBeginImageContext(image.size)
             image.draw(in: CGRect(origin: CGPoint.zero, size: image.size))
