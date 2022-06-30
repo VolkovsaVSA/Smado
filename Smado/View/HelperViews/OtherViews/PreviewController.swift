@@ -10,10 +10,11 @@ import QuickLook
 
 struct PreviewController: UIViewControllerRepresentable {
     @Binding var url: URL?
+    let isEditing: Bool
     
     func makeUIViewController(context: Context) -> UINavigationController {
         let controller = QLPreviewController()
-        controller.isEditing = true
+        controller.isEditing = isEditing
         controller.dataSource = context.coordinator
         controller.delegate = context.coordinator
         let navigationController = UINavigationController(rootViewController: controller)

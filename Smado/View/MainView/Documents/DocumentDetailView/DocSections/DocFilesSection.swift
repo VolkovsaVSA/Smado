@@ -30,23 +30,9 @@ struct DocFilesSection: View {
                         VStack {
                             Text(image.fileName?.lastComponent(maxCharacters: 40) ?? "no file name")
                                 .font(.system(size: 12, weight: .thin, design: .default))
-                            
-                            if image.fileExtention?.lowercased() == "pdf" {
-                                if let data = image.data {
-                                    PDFKitView(data: data, singlePage: false)
-                                        .frame(height: height)
-                                } else {
-                                    Image(systemName: "eye.slash")
-                                        .resizable()
-                                        .scaledToFit()
-                                        .foregroundColor(Color("imageFrameColor"))
-                                }
-                            } else {
-                                DocumentImage(image: image)
-                            }
-                            
+                            DocImageView(image: image)
                         }
-                        .onTapGesture { tapToFile(image: image) }
+//                        .onTapGesture { tapToFile(image: image) }
                         .swipeActions(edge: .trailing, allowsFullSwipe: true) {
                             Button(role: .destructive) {
                                 viewContext.delete(image)
@@ -70,13 +56,6 @@ struct DocFilesSection: View {
                  
                 .listRowSeparator(.hidden)
                 .quickLookPreview($tempUrl)
-//                .sheet(isPresented: $previewControllerShow) {
-//
-//                } content: {
-//                    PreviewController(url: $tempUrl)
-////                        .id(refreshfilesID)
-//                }
-
             }
             
         }
@@ -86,16 +65,16 @@ struct DocFilesSection: View {
     }
 }
 
-
-extension DocFilesSection {
-    
-    fileprivate func tapToFile(image: ImageCD) {
-        if let data = image.data,
-           let fileName = image.fileName
-        {
-            tempUrl = LocalFilesHelper.writeTempFile(data: data, fileName: fileName)
-            previewControllerShow.toggle()
-        }
-    }
-    
-}
+//
+//extension DocFilesSection {
+//    
+//    fileprivate func tapToFile(image: ImageCD) {
+//        if let data = image.data,
+//           let fileName = image.fileName
+//        {
+//            tempUrl = LocalFilesHelper.writeTempFile(data: data, fileName: fileName)
+//            previewControllerShow.toggle()
+//        }
+//    }
+//    
+//}

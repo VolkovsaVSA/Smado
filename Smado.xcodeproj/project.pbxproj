@@ -66,6 +66,7 @@
 		C8BF8777282AFDA00074E736 /* TermsConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BF8776282AFDA00074E736 /* TermsConditions.swift */; };
 		C8C2379F286A3C910039FD32 /* Developer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C2379E286A3C910039FD32 /* Developer.swift */; };
 		C8C237A1286A3DEA0039FD32 /* DebugSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C237A0286A3DEA0039FD32 /* DebugSection.swift */; };
+		C8C237A5286BB3B50039FD32 /* DocImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C237A4286BB3B50039FD32 /* DocImageView.swift */; };
 		C8CA1F0C283595C300FA477E /* DocInfSectionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CA1F0B283595C300FA477E /* DocInfSectionStyle.swift */; };
 		C8CF90D6280FE53C0028372A /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CF90D5280FE53C0028372A /* StoreManager.swift */; };
 		C8CF90D9281018450028372A /* SettingsToggleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CF90D8281018450028372A /* SettingsToggleCell.swift */; };
@@ -192,6 +193,7 @@
 		C8BF8776282AFDA00074E736 /* TermsConditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsConditions.swift; sourceTree = "<group>"; };
 		C8C2379E286A3C910039FD32 /* Developer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Developer.swift; sourceTree = "<group>"; };
 		C8C237A0286A3DEA0039FD32 /* DebugSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugSection.swift; sourceTree = "<group>"; };
+		C8C237A4286BB3B50039FD32 /* DocImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocImageView.swift; sourceTree = "<group>"; };
 		C8CA1F0B283595C300FA477E /* DocInfSectionStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocInfSectionStyle.swift; sourceTree = "<group>"; };
 		C8CF90D5280FE53C0028372A /* StoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 		C8CF90D7281007810028372A /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
@@ -470,6 +472,7 @@
 			children = (
 				C8EFEE3727F039F6007885CA /* DocumentImage.swift */,
 				C8EFEE3027E70799007885CA /* MenuFileButton.swift */,
+				C8C237A4286BB3B50039FD32 /* DocImageView.swift */,
 			);
 			path = DocSupportView;
 			sourceTree = "<group>";
@@ -718,6 +721,7 @@
 				C8763A41283A01120048812D /* Color+Extention.swift in Sources */,
 				C8236E2E27FAC5B600C7D4FD /* DocumentsPlusButton.swift in Sources */,
 				C8CF90EC281197820028372A /* GradientLine.swift in Sources */,
+				C8C237A5286BB3B50039FD32 /* DocImageView.swift in Sources */,
 				C896E4DF28173C5F00E75E8D /* FeedbackSection.swift in Sources */,
 				C8FFE98E27B863CF0008F571 /* IconButton.swift in Sources */,
 				C8845A5C282C3C74009D71EC /* FolderCD+CoreDataProperties.swift in Sources */,
@@ -921,7 +925,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Smado/Smado.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 22;
+				CURRENT_PROJECT_VERSION = 23;
 				DEVELOPMENT_ASSET_PATHS = "\"Smado/Preview Content\"";
 				DEVELOPMENT_TEAM = 7C46924T49;
 				ENABLE_PREVIEWS = YES;
@@ -955,7 +959,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Smado/Smado.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 22;
+				CURRENT_PROJECT_VERSION = 23;
 				DEVELOPMENT_ASSET_PATHS = "\"Smado/Preview Content\"";
 				DEVELOPMENT_TEAM = 7C46924T49;
 				ENABLE_PREVIEWS = YES;
