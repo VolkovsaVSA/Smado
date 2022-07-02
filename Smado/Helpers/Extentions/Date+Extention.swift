@@ -9,7 +9,7 @@ import Foundation
 
 
 extension Date {
-    func addOrSubtructDay (day:Int) -> Date {
+    func addOrSubtructDay(day: Int) -> Date {
       return Calendar.current.date(byAdding: .day, value: day, to: self)!
     }
 }

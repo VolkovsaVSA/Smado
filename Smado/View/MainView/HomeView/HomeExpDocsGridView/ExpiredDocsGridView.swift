@@ -14,7 +14,7 @@ struct ExpiredDocsGridView: View {
     private let status: ExpiredStatus
     
     @State private var selectedDocument: DocumentCD?
-    @State private var showModalView = false
+    @State private var showEditView = false
     @State private var refreshID = UUID()
     
     var documents: [DocumentCD]
@@ -40,11 +40,13 @@ struct ExpiredDocsGridView: View {
                 GradientLine()
                 LazyVGrid(columns: columns, alignment: .center, spacing: 12) {
                     ForEach(documents) { doc in
-                        DocumentsGridCellView(doc: doc, cellWidth: width) {
+                        
+                        DocumentMenuAction(doc: doc, width: width){
                             selectedDocument = doc
                             refreshID = UUID()
-                            withAnimation { showModalView.toggle() }
+                            withAnimation { showEditView.toggle() }
                         }
+
                     }
                 }
                 .padding()
@@ -53,7 +55,7 @@ struct ExpiredDocsGridView: View {
         .id(refreshID)
         .navigationTitle(ExpiredStatus.localize(status: status))
         
-        .sheet(isPresented: $showModalView) {
+        .sheet(isPresented: $showEditView) {
             if let doc = selectedDocument {
                 DocumentDetailView(document: doc, isNewDocument: false)
             }

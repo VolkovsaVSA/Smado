@@ -91,40 +91,27 @@ extension DocumentsGridCellView {
     }
     
     
-    private func checkDate(endDate: Date)->Color {
-        
+    private func checkDate(endDate: Date) -> Color {
+ 
         var color = Color.green
         
         let dateToday = Date()
         let calendar = Calendar.current
         let componentsToday = calendar.dateComponents([.year, .month, .weekOfMonth, .day], from: dateToday)
         let componentsEndDate = calendar.dateComponents([.year, .month, .weekOfMonth, .day], from: endDate)
-        
 
-        if Date().addOrSubtructDay(day: 31) >= endDate {color = .blue}
-        if Date().addOrSubtructDay(day: 8) >= endDate {color = .yellow}
-        
-//        if (componentsToday.year == componentsEndDate.year) &&
-//            (componentsToday.month == componentsEndDate.month) { color = .blue }
-//        
-//        if (componentsToday.year == componentsEndDate.year) &&
-//            (componentsToday.month == componentsEndDate.month) &&
-//            (componentsToday.weekOfMonth == componentsEndDate.weekOfMonth) { color = .yellow }
-        
-        if (componentsToday.year == componentsEndDate.year) &&
-            (componentsToday.month == componentsEndDate.month) &&
-            (componentsToday.day == componentsEndDate.day) { color = .red }
-        
-        if let todayYear = componentsToday.year,
-           let todayMonth = componentsToday.month,
-           let todayDay = componentsToday.day,
-           let endYaer = componentsEndDate.year,
-           let endMonth = componentsEndDate.month,
-           let endDay = componentsEndDate.day
-        {
-            if (todayYear >= endYaer) &&
-                (todayMonth >= endMonth) &&
-                (todayDay > endDay) { color = .gray }
+        if Date().addOrSubtructDay(day: 31) >= endDate
+            && Date().addOrSubtructDay(day: 1) <= endDate {
+            color = .blue
+        } else if Date().addOrSubtructDay(day: 8) >= endDate
+                    && Date().addOrSubtructDay(day: 0) <= endDate {
+            color = .yellow
+        } else if (componentsToday.year == componentsEndDate.year) &&
+                    (componentsToday.month == componentsEndDate.month) &&
+                    (componentsToday.day == componentsEndDate.day) {
+            color = .red
+        } else if Date().addOrSubtructDay(day: -1) > endDate {
+            color = .gray
         }
 
         return color.opacity(0.7)

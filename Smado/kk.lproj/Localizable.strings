@@ -139,6 +139,9 @@
 /* No comment provided by engineer. */
 "Settings" = "Настройки";
 
+/* No comment provided by engineer. */
+"Show" = "Показать";
+
 /* ColorScheme */
 "System" = "Системная";
 
@@ -167,7 +170,7 @@
 "Too many images saved! Maximum number of files to save: %lld" = "Сохранено слишком много изображений! Максимальное количество файлов для сохранения: %lld";
 
 /* No comment provided by engineer. */
-"Unlimited access" = "Неограниченный доступ";
+"Unlimited access" = "Безлимитный доступ";
 
 /* No comment provided by engineer. */
 "Warning!" = "Предупреждение!";

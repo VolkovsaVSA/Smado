@@ -28,11 +28,9 @@ struct DocDataSection: View {
                 TextField("Title", text: $title)
                     .font(.system(size: 16, weight: .bold, design: .default))
                     .submitLabel(.done)
-                DatePicker("Deadline", selection: $dateEnd, in: Date()..., displayedComponents: [.date])
-//                    .font(.system(size: 15, weight: .thin, design: .default))
+                DatePicker("Deadline", selection: $dateEnd, displayedComponents: [.date])
                 HStack {
                     Text("Category")
-//                        .font(.system(size: 15, weight: .thin, design: .default))
                     Spacer()
                     Picker("", selection: $category) {
                         ForEach(categories) { cat in

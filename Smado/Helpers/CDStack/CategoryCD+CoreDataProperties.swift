@@ -13,7 +13,9 @@ import CoreData
 extension CategoryCD {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<CategoryCD> {
-        return NSFetchRequest<CategoryCD>(entityName: "CategoryCD")
+        let request = NSFetchRequest<CategoryCD>(entityName: "CategoryCD")
+        request.sortDescriptors = [NSSortDescriptor(keyPath: \CategoryCD.craetedDate, ascending: true)]
+        return request
     }
 
     @NSManaged public var craetedDate: Date?

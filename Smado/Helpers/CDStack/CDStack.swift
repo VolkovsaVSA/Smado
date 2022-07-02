@@ -145,40 +145,25 @@ class CDStack {
         let calendar = Calendar.current
         let componentsToday = calendar.dateComponents([.year, .month, .weekOfMonth, .day], from: date)
         
-        guard let todayYear = componentsToday.year,
-              let todayMonth = componentsToday.month,
-              let todayDay = componentsToday.day else {return []}
-        
+//        guard let todayYear = componentsToday.year,
+//              let todayMonth = componentsToday.month,
+//              let todayDay = componentsToday.day else {return []}
+//        
         switch expiresStatus {
                 
             case .expired:
                 return documents.filter {
                     guard let endDate = $0.dateEnd else {return false}
-                    let componentsEnd = calendar.dateComponents([.year, .month, .weekOfMonth, .day], from: endDate)
-                    
-                    if let endYaer = componentsEnd.year,
-                       let endMonth = componentsEnd.month,
-                       let endDay = componentsEnd.day
-                    {
-                        return (todayYear >= endYaer) &&
-                            (todayMonth >= endMonth) &&
-                            (todayDay > endDay)
-                    } else {
-                        return false
-                    }
-                    
+                    return Date().addOrSubtructDay(day: -1) > endDate
                 }.sorted {$0.dateEnd ?? Date() < $1.dateEnd ?? Date()}
                 
             case .today:
-                return documents.filter { document in
-                    if let docDate = document.dateEnd {
-                        let componentsDoc = calendar.dateComponents([.year, .month, .weekOfMonth, .day], from: docDate)
-                        return (componentsToday.year == componentsDoc.year) &&
-                            (componentsToday.month == componentsDoc.month) &&
-                            (componentsToday.day == componentsDoc.day)
-                    } else {
-                        return false
-                    }
+                return documents.filter {
+                    guard let endDate = $0.dateEnd else {return false}
+                    let componentsDoc = calendar.dateComponents([.year, .month, .weekOfMonth, .day], from: endDate)
+                    return (componentsToday.year == componentsDoc.year) &&
+                        (componentsToday.month == componentsDoc.month) &&
+                        (componentsToday.day == componentsDoc.day)
                 }.sorted {$0.dateEnd ?? Date() < $1.dateEnd ?? Date()}
                 
             case .thisWeek:
@@ -212,6 +197,15 @@ class CDStack {
             print("fetch error \(error.localizedDescription)")
         }
         
+    }
+    func fetchCatigories(callBack: @escaping ([CategoryCD])->Void) {
+        var catigories = [CategoryCD]()
+        do {
+            catigories = try container.viewContext.fetch(CategoryCD.fetchRequest())
+            callBack(catigories)
+        } catch {
+            print("fetch error \(error.localizedDescription)")
+        }
     }
     
     func fixedCameraImageBug(fileExtention: String, context: NSManagedObjectContext) {
